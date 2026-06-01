@@ -115,12 +115,17 @@ export default async function SuccessPage({
         </div>
       </section>
 
-      {/* Video placeholder */}
+      {/* Video */}
       <section className="py-12 bg-paper">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="aspect-video bg-navy/10 rounded-xl flex items-center justify-center">
-            <span className="text-4xl text-gold">&#9654;</span>
-          </div>
+          <video
+            className="w-full aspect-video rounded-xl shadow-lg"
+            controls
+            preload="metadata"
+            poster="/images/pnina.png"
+          >
+            <source src="/images/pdn-graduates-testimonials.mp4" type="video/mp4" />
+          </video>
           <p className="text-sm text-text-secondary mt-3">
             {locale === "he" ? "בוגרי השיטה מספרים" : "Method graduates share their stories"}
           </p>
