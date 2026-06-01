@@ -5,6 +5,7 @@ import { ProgramsComparison } from "@/components/ProgramsComparison";
 import { FeatureMatrix } from "@/components/FeatureMatrix";
 import { FAQ } from "@/components/FAQ";
 import { ProofSection } from "@/components/ProofSection";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -32,6 +33,8 @@ export default async function ProgramsPage({
 
   return (
     <>
+      <Breadcrumbs locale={locale} items={[{ label: dict.nav.programs }]} />
+
       {/* Hero */}
       <section className="bg-navy text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

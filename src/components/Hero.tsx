@@ -27,6 +27,9 @@ export function Hero({ dict, locale }: HeroProps) {
       />
       <StarField />
 
+      {/* Text contrast overlay - stronger on mobile */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-transparent sm:from-black/30 sm:via-black/10 sm:to-transparent" aria-hidden="true" />
+
       {/* Floating orbs for depth */}
       <FloatingOrb size={400} color="rgba(200,160,78,0.06)" className="top-1/4 start-1/4" delay={0} />
       <FloatingOrb size={300} color="rgba(46,53,89,0.3)" className="bottom-1/4 end-1/4" delay={2} />

@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getDictionary } from "@/i18n/dictionaries";
 import { type Locale } from "@/i18n/config";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -9,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const title = locale === "he" ? "מאמרים | PDN - קוד המקור" : "Articles | PDN - Source Code";
   const description = locale === "he"
     ? "כלים ותובנות להצלחה - מאמרים מעולם שיטת PDN לפיתוח אישי וניווט חייך להצלחה."
-    : "Tools and insights for success - articles from the PDN method for personal development and navigating your life to success.";
+    : "Tools and insights for success - articles from the PDN method for personal development.";
   return { title, description, alternates: { canonical: `${baseUrl}/${locale}/articles`, languages: { he: `${baseUrl}/he/articles`, en: `${baseUrl}/en/articles` } } };
 }
 
@@ -17,78 +18,72 @@ const articles = [
   {
     slug: "everyone-is-unique",
     title: { he: "כל אחד הוא יחיד ומיוחד וחשוב לעולם", en: "Everyone is Unique and Important to the World" },
-    excerpt: {
-      he: "אתחיל מאמירה של המנטור רובין שארמה: \"יש לך משהו להציע שאף אחד אחר לא יכול להציע, וזה מה שעושה אותך מיוחד\". תמיד הייתי מאמינה נחרצת בכוחו של הפוטנציאל האנושי.",
-      en: "I'll start with a quote from mentor Robin Sharma: \"You have something to offer that no one else can, and that's what makes you special.\" I've always been a firm believer in the power of human potential.",
-    },
-    content: {
-      he: [
-        "אתחיל מאמירה של המנטור רובין שארמה: \"יש לך משהו להציע שאף אחד אחר לא יכול להציע, וזה מה שעושה אותך מיוחד\".",
-        "תמיד הייתי מאמינה נחרצת בכוחו של הפוטנציאל האנושי. אני מאמינה שלכולנו יש את היכולת להגיע לגדולות, ליצור דברים יפים ולחולל שינוי אמיתי בעולם. אבל כדי לעשות זאת, עלינו קודם כל להאמין בעצמנו וביכולות שלנו.",
-        "אז אם אי פעם מצאתם את עצמכם מפקפקים בערך שלכם או מפקפקים במה שיש לכם להציע, זכרו שאתם מיוחדים וייחודיים, ושהעולם זקוק למתנות שלכם.",
-        "קחו את הזמן כדי לגלות מה עושה אתכם מיוחדים. גלו את הצופן המיוחד שלכם וממה אתם באמת נלהבים. חבקו את הכישרונות שלכם ושתפו אותם עם העולם.",
-        "הנה כמה עצות פשוטות איך להפוך את הענקת מתנתכם לעולם להרגל:\n1. התחל/י ברישום בספר ההתמרות שלך, הגדר את המתנות/הכישרונות במושך הדומיננטי בצופן שלך.\n2. בחר/י מתוכן את אלו שקל לך להעניק ללא מאמץ.\n3. החלט/י במודע - למי את/ה מעניקים אותם כל יום והענק/י אותן.",
-        "אנא, יקרות ויקרים, זכרו לתת מתנתכם/ן לעולם. היא עשויה להציל נפשות רבות. וכפי שאמרו חז\"ל: \"כל המציל נפש אחת כאילו הציל עולם ומלואו\".",
-        "באהבה ובהתמרה, פנינה",
-      ],
-      en: [
-        "I'll start with a quote from mentor Robin Sharma: \"You have something to offer that no one else can, and that's what makes you special.\"",
-        "I've always been a firm believer in the power of human potential. I believe we all have the ability to achieve greatness, create beautiful things, and make a real difference in the world. But to do so, we must first believe in ourselves and our abilities.",
-        "So if you've ever found yourself doubting your worth or questioning what you have to offer, remember that you are special and unique, and the world needs your gifts.",
-        "Take the time to discover what makes you special. Discover your unique code and what you're truly passionate about. Embrace your talents and share them with the world.",
-        "Here are some simple tips for making giving your gift to the world a habit:\n1. Start by writing in your transformation journal, define the gifts/talents in your dominant attractor.\n2. Choose those that are easy for you to give effortlessly.\n3. Consciously decide - to whom are you giving them every day.",
-        "Please, dear ones, remember to give your gift to the world. It may save many lives. As our sages said: \"Whoever saves one life, it is as if they saved the entire world.\"",
-        "With love and transformation, Pnina",
-      ],
-    },
+    excerpt: { he: "אתחיל מאמירה של המנטור רובין שארמה: \"יש לך משהו להציע שאף אחד אחר לא יכול להציע, וזה מה שעושה אותך מיוחד\".", en: "I'll start with a quote from Robin Sharma: \"You have something to offer that no one else can, and that's what makes you special.\"" },
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=450&fit=crop",
+    likes: 47,
   },
   {
     slug: "world-as-our-thoughts",
     title: { he: "העולם כיציר מחשבותינו", en: "The World as a Creation of Our Thoughts" },
-    excerpt: {
-      he: "האם אי פעם עצרתם לשקול את כוחן של המחשבות והאמונות שלכם? לפי אלברט איינשטיין, \"העולם כפי שיצרנו אותו הוא תהליך של החשיבה שלנו. לא ניתן לשנותו מבלי לשנות את חשיבתנו\".",
-      en: "Have you ever stopped to consider the power of your thoughts and beliefs? According to Albert Einstein, \"The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.\"",
-    },
-    content: {
-      he: [
-        "האם אי פעם עצרתם לשקול את כוחן של המחשבות והאמונות שלכם?",
-        "לפי אלברט איינשטיין, \"העולם כפי שיצרנו אותו הוא תהליך של החשיבה שלנו. לא ניתן לשנותו מבלי לשנות את חשיבתנו\".",
-        "המחשבות שלנו מעצבות את המציאות שלנו. כשאנחנו חושבים מחשבות חיוביות ומעצימות, אנחנו יוצרים מציאות חיובית. כשאנחנו נתפסים בדפוסי חשיבה שליליים, אנחנו יוצרים מציאות מגבילה.",
-        "שיטת PDN מלמדת אותנו לזהות את דפוסי החשיבה שלנו - את הפחדים השורשיים שמנווטים את ההחלטות שלנו - ולהתמיר אותם לדפוסים חדשים שמשרתים את ההצלחה שלנו.",
-        "באהבה ובהתמרה, פנינה",
-      ],
-      en: [
-        "Have you ever stopped to consider the power of your thoughts and beliefs?",
-        "According to Albert Einstein, \"The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.\"",
-        "Our thoughts shape our reality. When we think positive and empowering thoughts, we create a positive reality. When we get caught in negative thinking patterns, we create a limiting reality.",
-        "The PDN method teaches us to identify our thinking patterns - the root fears that navigate our decisions - and transform them into new patterns that serve our success.",
-        "With love and transformation, Pnina",
-      ],
-    },
+    excerpt: { he: "האם אי פעם עצרתם לשקול את כוחן של המחשבות והאמונות שלכם? לפי אלברט איינשטיין, \"העולם כפי שיצרנו אותו הוא תהליך של החשיבה שלנו\".", en: "Have you ever stopped to consider the power of your thoughts? According to Einstein, \"The world as we created it is a process of our thinking.\"" },
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=450&fit=crop",
+    likes: 38,
   },
   {
     slug: "garden-of-life",
     title: { he: "לנו הבחירה לפתח את גן החיים", en: "We Have the Choice to Cultivate the Garden of Life" },
-    excerpt: {
-      he: "אני רוצה לשתף אתכם באימרה מטפורית מעוררת תובנה מאת רובין שארמה: \"המוח שלך הוא גן, המחשבות שלך הן הזרעים, והיבול יכול להיות פרחים או עשבים שוטים\".",
-      en: "I want to share with you an insightful metaphorical quote from Robin Sharma: \"Your mind is a garden, your thoughts are the seeds, and the harvest can be either flowers or weeds.\"",
-    },
-    content: {
-      he: [
-        "אני רוצה לשתף אתכם באימרה מטפורית מעוררת תובנה מאת רובין שארמה, שיש בכוחה לשנות את חייכם:",
-        "\"המוח שלך הוא גן, המחשבות שלך הן הזרעים, והיבול יכול להיות פרחים או עשבים שוטים\".",
-        "כמו גנן שמטפח את גינתו, כך אנחנו צריכים לטפח את המחשבות שלנו. לבחור בקפידה אילו זרעים אנחנו שותלים במוח שלנו.",
-        "שיטת PDN מעניקה לנו את הכלים לזהות את ה\"עשבים השוטים\" - הפחדים והדפוסים המגבילים - ולשתול במקומם \"פרחים\" - מחשבות מעצימות שמנווטות אותנו להצלחה.",
-        "באהבה ובהתמרה, פנינה",
-      ],
-      en: [
-        "I want to share with you an insightful metaphorical quote from Robin Sharma that has the power to change your life:",
-        "\"Your mind is a garden, your thoughts are the seeds, and the harvest can be either flowers or weeds.\"",
-        "Like a gardener who tends their garden, we need to tend our thoughts. To carefully choose which seeds we plant in our minds.",
-        "The PDN method gives us the tools to identify the \"weeds\" - the fears and limiting patterns - and plant \"flowers\" in their place - empowering thoughts that navigate us to success.",
-        "With love and transformation, Pnina",
-      ],
-    },
+    excerpt: { he: "אני רוצה לשתף אתכם באימרה מטפורית מעוררת תובנה מאת רובין שארמה: \"המוח שלך הוא גן, המחשבות שלך הן הזרעים, והיבול יכול להיות פרחים או עשבים שוטים\".", en: "Robin Sharma: \"Your mind is a garden, your thoughts are the seeds, and the harvest can be either flowers or weeds.\"" },
+    image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=450&fit=crop",
+    likes: 42,
+  },
+  {
+    slug: "gratitude-changes-world",
+    title: { he: "הכרת תודה - משנה את העולם", en: "Gratitude - Changes the World" },
+    excerpt: { he: "דיפאק צ'ופרה אומר: \"הכרת תודה היא כוח רב עוצמה שיכול לשנות את חיינו. היא יכולה לרפא את מערכות היחסים שלנו, לשפר את בריאותנו ולהביא לנו יותר שפע\".", en: "Deepak Chopra says: \"Gratitude is a powerful force that can change our lives. It can heal our relationships, improve our health, and bring us more abundance.\"" },
+    image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=800&h=450&fit=crop",
+    likes: 35,
+  },
+  {
+    slug: "fear-becomes-advisor",
+    title: { he: "המסע שבו הפחד השורשי שלך הופך ליועץ חכם להצלחה", en: "The Journey Where Your Root Fear Becomes a Wise Advisor" },
+    excerpt: { he: "פרספקטיבה רבת עוצמה שטוני רובינס טווה יפה במילותיו: \"תן לפחד להיות היועץ שלך, לא הסוהר שלך.\" הצהרה זו טומנת בחובה אמת עמוקה.", en: "Tony Robbins weaves beautifully: \"Let fear be your advisor, not your jailer.\" This statement holds a deep truth." },
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=450&fit=crop",
+    likes: 29,
+  },
+  {
+    slug: "creating-reality",
+    title: { he: "PDN, RAS, גן החיים, יצירת מציאות", en: "PDN, RAS, Garden of Life, Creating Reality" },
+    excerpt: { he: "וולט דיסני אמר פעם: \"אם אתה יכול לחלום את זה - אתה יכול לעשות את זה\". משמעות הדבר היא שלחלומות ולשאיפות שלנו יש את הכוח להפוך למציאות.", en: "Walt Disney once said: \"If you can dream it, you can do it.\" This means our dreams and aspirations have the power to become reality." },
+    image: "https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=800&h=450&fit=crop",
+    likes: 33,
+  },
+  {
+    slug: "power-of-new-language",
+    title: { he: "עוצמתה של יצירת השפה החדשה בתת מודע", en: "The Power of Creating New Language in the Subconscious" },
+    excerpt: { he: "זה לא סוד שהמחשבות שלנו מעצבות את המציאות שלנו ושלאופן שבו אנחנו חושבים יש השפעה עמוקה על חיינו. לואיז היי אומרת: \"המחשבות שאנו בוחרים לחשוב...\"", en: "It's no secret that our thoughts shape our reality. Louise Hay says: \"The thoughts we choose to think...\"" },
+    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&h=450&fit=crop",
+    likes: 26,
+  },
+  {
+    slug: "courage-frequency",
+    title: { he: "תדר האומץ הוא הדלק להשגת כל מטרה", en: "The Frequency of Courage is the Fuel for Achieving Any Goal" },
+    excerpt: { he: "לא משנה כמה גדולה או מרתיעה המטרה שלכם עשויה להיראות, יש לכם את העוצמות בתוככם להפוך אותה למציאות. אבל זה ידרוש אמונה ואומץ.", en: "No matter how big or daunting your goal may seem, you have the power within you to make it reality. But it will require faith and courage." },
+    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&h=450&fit=crop",
+    likes: 41,
+  },
+  {
+    slug: "inspiration-gift",
+    title: { he: "השראה היא המתנה הגדולה שניתנה לנו שנוכל לקבל ולתת לעולם", en: "Inspiration is the Greatest Gift Given to Us to Receive and Give" },
+    excerpt: { he: "אלברט איינשטיין אמר פעם: \"המהות והערך העיקריים של הפרט אינם מעצם היותו ישות מובחנת, אלא מעצם היותו חלק מקהילה אנושית גדולה\".", en: "Einstein once said: \"The essence and value of the individual is not from being a distinct entity, but from being part of a greater human community.\"" },
+    image: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=800&h=450&fit=crop",
+    likes: 37,
+  },
+  {
+    slug: "ocean-of-possibilities",
+    title: { he: "להפליג אל אוקיינוס האפשרויות", en: "Sailing to the Ocean of Possibilities" },
+    excerpt: { he: "מתנה ענקית ניתנה לבני האנוש - היא מתנת \"חופש הבחירה\" מתוך התודעה התבונית. מאידך, נולדנו גם עם תודעה הישרדותית, שכל רצונה היא שנשרוד בכל מחיר.", en: "A tremendous gift was given to humanity - the gift of \"freedom of choice\" from wise consciousness. On the other hand, we were also born with survival consciousness." },
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=450&fit=crop",
+    likes: 44,
   },
 ];
 
@@ -103,8 +98,10 @@ export default async function ArticlesPage({
 
   return (
     <>
+      <Breadcrumbs locale={locale} items={[{ label: dict.nav.articles }]} />
+
       {/* Hero */}
-      <section className="bg-navy text-white py-16 sm:py-20">
+      <section className="bg-navy text-white py-12 sm:py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl font-display font-bold mb-3">
             {locale === "he" ? "כלים ותובנות להצלחה" : "Tools & Insights for Success"}
@@ -115,25 +112,45 @@ export default async function ArticlesPage({
         </div>
       </section>
 
-      {/* Articles List */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-6">
+      {/* Articles Grid */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {articles.map((article) => (
               <Link
                 key={article.slug}
                 href={`/${locale}/articles/${article.slug}`}
-                className="block border border-border rounded-xl p-6 hover:shadow-md transition-all duration-300 hover:border-gold/30 group"
+                className="group block border border-border rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-gold/30"
               >
-                <h2 className="text-xl font-display font-bold mb-2 group-hover:text-gold transition-colors">
-                  {article.title[locale]}
-                </h2>
-                <p className="text-text-secondary text-sm mb-4 leading-relaxed">
-                  {article.excerpt[locale]}
-                </p>
-                <span className="text-gold text-sm font-bold group-hover:underline">
-                  {locale === "he" ? "קרא עוד ←" : "Read more →"}
-                </span>
+                {/* Image */}
+                <div className="aspect-video overflow-hidden bg-paper">
+                  <img
+                    src={article.image}
+                    alt={article.title[locale]}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="p-5">
+                  <h2 className="text-lg font-display font-bold mb-2 group-hover:text-gold transition-colors line-clamp-2">
+                    {article.title[locale]}
+                  </h2>
+                  <p className="text-text-secondary text-sm mb-4 leading-relaxed line-clamp-2">
+                    {article.excerpt[locale]}
+                  </p>
+
+                  {/* Footer: likes + read more */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-text-secondary flex items-center gap-1">
+                      <span className="text-gold">&#9829;</span> {article.likes}
+                    </span>
+                    <span className="text-gold text-sm font-bold group-hover:underline">
+                      {locale === "he" ? "קרא עוד ←" : "Read more →"}
+                    </span>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>

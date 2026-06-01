@@ -54,6 +54,14 @@ export function ProgramsPreview({ dict, locale }: Props) {
                   <p className="text-sm text-text-secondary mb-2">
                     {program.subtitle}
                   </p>
+
+                  {/* Price - bold and prominent */}
+                  <div className="mb-3">
+                    {key === "discover" && <span className="text-2xl font-bold text-navy">₪970</span>}
+                    {key === "transformation" && <span className="text-2xl font-bold text-navy">₪1,800</span>}
+                    {key === "challenge" && <span className="text-2xl font-bold text-navy">₪2,800</span>}
+                  </div>
+
                   <p className="text-sm text-text-secondary mb-5">
                     {program.description}
                   </p>

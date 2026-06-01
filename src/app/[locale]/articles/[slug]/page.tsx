@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { type Locale } from "@/i18n/config";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 const articles: Record<string, {
   title: { he: string; en: string };
@@ -71,6 +72,55 @@ const articles: Record<string, {
       ],
     },
   },
+  "gratitude-changes-world": {
+    title: { he: "הכרת תודה - משנה את העולם", en: "Gratitude - Changes the World" },
+    content: {
+      he: ["דיפאק צ'ופרה אומר: \"הכרת תודה היא כוח רב עוצמה שיכול לשנות את חיינו. היא יכולה לרפא את מערכות היחסים שלנו, לשפר את בריאותנו ולהביא לנו יותר שפע\".", "הכרת תודה היא לא רק מילה יפה - היא תדר אנרגטי שמשנה את האופן שבו אנחנו חווים את המציאות. כשאנחנו מתמקדים במה שיש לנו, במקום במה שחסר - אנחנו פותחים את הדלת לשפע.", "בשיטת PDN, הכרת תודה היא חלק מתהליך ההתמרה - המעבר מתודעה הישרדותית (שתמיד מחפשת מה חסר) לתודעת שפע (שרואה את המתנות שכבר קיימות).", "באהבה ובהתמרה, פנינה"],
+      en: ["Deepak Chopra says: \"Gratitude is a powerful force that can change our lives. It can heal our relationships, improve our health, and bring us more abundance.\"", "Gratitude is not just a nice word - it's an energetic frequency that changes how we experience reality. When we focus on what we have, instead of what's missing - we open the door to abundance.", "In the PDN method, gratitude is part of the transformation process - the shift from survival consciousness (always looking for what's missing) to abundance consciousness (seeing the gifts already present).", "With love and transformation, Pnina"],
+    },
+  },
+  "fear-becomes-advisor": {
+    title: { he: "המסע שבו הפחד השורשי שלך הופך ליועץ חכם להצלחה", en: "The Journey Where Your Root Fear Becomes a Wise Advisor" },
+    content: {
+      he: ["פרספקטיבה רבת עוצמה שטוני רובינס טווה יפה במילותיו: \"תן לפחד להיות היועץ שלך, לא הסוהר שלך.\"", "הצהרה זו טומנת בחובה אמת עמוקה שיכולה להגדיר מחדש את הדרך שבה אנו מתייחסים לפחדים שלנו.", "בשיטת PDN, אנחנו לא מנסים להיפטר מהפחד - אנחנו לומדים להקשיב לו. הפחד השורשי שלך מכיל מידע חשוב על מי שאתה ומה אתה צריך כדי לצמוח.", "כשאתה מזהה את הפחד השורשי שלך (מסכנות, מבדידות, מכישלון, או משיעבוד) - אתה מקבל מפתח להבנת הדפוסים שחוזרים בחייך ויכולת לנווט אחרת.", "באהבה ובהתמרה, פנינה"],
+      en: ["Tony Robbins weaves beautifully: \"Let fear be your advisor, not your jailer.\"", "This statement holds a deep truth that can redefine how we relate to our fears.", "In the PDN method, we don't try to get rid of fear - we learn to listen to it. Your root fear contains important information about who you are and what you need to grow.", "When you identify your root fear (of danger, loneliness, failure, or enslavement) - you receive a key to understanding the patterns repeating in your life and the ability to navigate differently.", "With love and transformation, Pnina"],
+    },
+  },
+  "creating-reality": {
+    title: { he: "PDN, RAS, גן החיים, יצירת מציאות", en: "PDN, RAS, Garden of Life, Creating Reality" },
+    content: {
+      he: ["וולט דיסני אמר פעם: \"אם אתה יכול לחלום את זה - אתה יכול לעשות את זה\".", "משמעות הדבר היא שלחלומות ולשאיפות שלנו יש את הכוח להפוך למציאות שלנו.", "מערכת ה-RAS (Reticular Activating System) במוח שלנו היא המפתח - היא מסננת את המידע שאנחנו קולטים מהעולם. כשאנחנו מתכנתים אותה נכון, היא מתחילה לאתר הזדמנויות שתואמות את המטרות שלנו.", "בשיטת PDN, אנחנו לומדים לכוון את מערכת ה-RAS בעזרת הצופן האישי - ליצור מציאות חדשה מתוך תודעה גבוהה.", "באהבה ובהתמרה, פנינה"],
+      en: ["Walt Disney once said: \"If you can dream it, you can do it.\"", "This means our dreams and aspirations have the power to become our reality.", "The RAS (Reticular Activating System) in our brain is the key - it filters the information we absorb from the world. When we program it correctly, it starts detecting opportunities that match our goals.", "In the PDN method, we learn to calibrate the RAS system using the personal cipher - to create a new reality from higher consciousness.", "With love and transformation, Pnina"],
+    },
+  },
+  "power-of-new-language": {
+    title: { he: "עוצמתה של יצירת השפה החדשה בתת מודע", en: "The Power of Creating New Language in the Subconscious" },
+    content: {
+      he: ["זה לא סוד שהמחשבות שלנו מעצבות את המציאות שלנו ושלאופן שבו אנחנו חושבים יש השפעה עמוקה על חיינו.", "לואיז היי אומרת: \"המחשבות שאנו בוחרים לחשוב הן הכלים שבהם אנו מציירים את בד חיינו\".", "בשיטת PDN, אנחנו לומדים ליצור שפה חדשה - שפה שמתאימה לצופן האישי שלנו ומנווטת אותנו מתודעה הישרדותית לתודעת שפע.", "באהבה ובהתמרה, פנינה"],
+      en: ["It's no secret that our thoughts shape our reality and that how we think has a profound impact on our lives.", "Louise Hay says: \"The thoughts we choose to think are the tools with which we paint the canvas of our lives.\"", "In the PDN method, we learn to create a new language - a language that matches our personal cipher and navigates us from survival consciousness to abundance consciousness.", "With love and transformation, Pnina"],
+    },
+  },
+  "courage-frequency": {
+    title: { he: "תדר האומץ הוא הדלק להשגת כל מטרה", en: "The Frequency of Courage is the Fuel for Achieving Any Goal" },
+    content: {
+      he: ["לא משנה כמה גדולה או מרתיעה המטרה שלכם עשויה להיראות, יש לכם את העוצמות בתוככם להפוך אותה למציאות.", "אבל זה ידרוש אמונה, אומץ ונכונות לצאת מאזור הנוחות.", "תדר האומץ הוא אחד התדרים הגבוהים ביותר שאנחנו יכולים לשדר. כשאנחנו פועלים מתוך אומץ - אנחנו מתחברים לעוצמה הפנימית שלנו ופותחים דלתות חדשות.", "בשיטת PDN, אנחנו מזהים את הפחד שעוצר אותנו ולומדים להתמיר אותו לאומץ - הדלק שמניע אותנו קדימה.", "באהבה ובהתמרה, פנינה"],
+      en: ["No matter how big or daunting your goal may seem, you have the power within you to make it reality.", "But it will require faith, courage, and willingness to leave your comfort zone.", "The frequency of courage is one of the highest frequencies we can broadcast. When we act from courage - we connect to our inner power and open new doors.", "In the PDN method, we identify the fear that stops us and learn to transform it into courage - the fuel that drives us forward.", "With love and transformation, Pnina"],
+    },
+  },
+  "inspiration-gift": {
+    title: { he: "השראה היא המתנה הגדולה שניתנה לנו שנוכל לקבל ולתת לעולם", en: "Inspiration is the Greatest Gift Given to Us" },
+    content: {
+      he: ["אלברט איינשטיין אמר פעם: \"המהות והערך העיקריים של הפרט אינם מעצם היותו ישות מובחנת, אלא מעצם היותו חלק מקהילה אנושית גדולה\".", "ציטוט זה מדבר על הקשר העמוק בינינו לבין העולם סביבנו. כולנו חלק ממשהו גדול יותר.", "השראה היא הגשר - היא מה שמחבר בין המתנה הייחודית שלנו לבין העולם שזקוק לה.", "בשיטת PDN, אנחנו מגלים את המתנה הייחודית שלנו ולומדים איך להעניק אותה לעולם - זו ההשראה האמיתית.", "באהבה ובהתמרה, פנינה"],
+      en: ["Einstein once said: \"The essence and value of the individual is not from being a distinct entity, but from being part of a greater human community.\"", "This quote speaks to the deep connection between us and the world around us. We are all part of something greater.", "Inspiration is the bridge - it's what connects our unique gift to the world that needs it.", "In the PDN method, we discover our unique gift and learn how to give it to the world - that's true inspiration.", "With love and transformation, Pnina"],
+    },
+  },
+  "ocean-of-possibilities": {
+    title: { he: "להפליג אל אוקיינוס האפשרויות", en: "Sailing to the Ocean of Possibilities" },
+    content: {
+      he: ["מתנה ענקית ניתנה לבני האנוש - היא מתנת \"חופש הבחירה\" מתוך התודעה התבונית.", "מאידך, נולדנו גם עם תודעה הישרדותית, שכל רצונה היא שנשרוד בכל מחיר. היא זו שמייצרת את הפחדים, החסמים והדפוסים החוזרים.", "האוקיינוס של האפשרויות נפתח כשאנחנו בוחרים לפעול מתוך התודעה התבונית - מתוך חופש בחירה אמיתי.", "שיטת PDN מעניקה לנו את המפה לניווט באוקיינוס הזה - את \"קוד המקור\" שמראה לנו את הדרך הבטוחה והמהירה ליעד.", "באהבה ובהתמרה, פנינה"],
+      en: ["A tremendous gift was given to humanity - the gift of \"freedom of choice\" from wise consciousness.", "On the other hand, we were also born with survival consciousness, whose only desire is that we survive at all costs. It creates the fears, blocks, and repeating patterns.", "The ocean of possibilities opens when we choose to act from wise consciousness - from true freedom of choice.", "The PDN method gives us the map for navigating this ocean - the \"Source Code\" that shows us the safe and fast route to our destination.", "With love and transformation, Pnina"],
+    },
+  },
 };
 
 export async function generateStaticParams() {
@@ -96,6 +146,11 @@ export default async function ArticlePage({
 
   return (
     <>
+      <Breadcrumbs locale={locale} items={[
+        { label: locale === "he" ? "מאמרים" : "Articles", href: `/${locale}/articles` },
+        { label: article.title[locale] },
+      ]} />
+
       <section className="bg-navy text-white py-12 sm:py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href={`/${locale}/articles`} className="text-gold text-sm hover:underline mb-4 inline-block">

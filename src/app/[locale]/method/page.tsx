@@ -11,14 +11,17 @@ const methodContent = {
     sections: [
       {
         title: "החדשנות",
+        icon: "✦",
         content: "החדשנות בשיטה הוא \"קוד המקור\" - צופן PDN נווט להתפתחות אישית, המאפשר לאדם להתמודד עם אתגרים שונים בחיים בקלות ולנווט חייו להצלחה. שביסודו מזהה את הפחדים השורשיים והחוזקות של הפרט ומעניק לו מפה אישית כיצד להשתחרר מהפחדים החוסמים אותו ולנווט דרכו להצלחה.",
       },
       {
         title: "GPS לחיים",
+        icon: "◈",
         content: "כלי שברגע שמגלים אותו מבינים שמקבלים מתנה ענקית לחיים מעין \"GPS לחיים\" המאפשר לאדם להגיע ליעד שבחר בהצלחה.",
       },
       {
         title: "הבסיס המדעי",
+        icon: "◉",
         content: "שיטת P.D.N היא כלי הערכה אישיותי-התנהגותי חדשני, המבוסס על מחקר תאורטי ומעשי רב שנים של מפתחת השיטה בשדה חקר תודעה וקבלת החלטות. השיטה מסייעת לאנשים להבין את מנעי ההתנהגות, נקודת המבט שלהם על העולם, סגנונות התקשורת שלהם, ומהן חוזקותיהם ומה מתנתם לעולם.",
       },
       {
@@ -139,13 +142,16 @@ export default async function MethodPage({
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           {content.sections.map((section, i) => (
-            <div key={i}>
-              <h2 className="text-xl sm:text-2xl font-display font-bold mb-3 text-navy">
-                {section.title}
-              </h2>
-              <p className="text-text-secondary leading-relaxed">
-                {section.content}
-              </p>
+            <div key={i} className="flex items-start gap-4">
+              <span className="text-2xl text-gold shrink-0 mt-1">{"icon" in section ? (section as any).icon : "✦"}</span>
+              <div>
+                <h2 className="text-xl sm:text-2xl font-display font-bold mb-3 text-navy">
+                  {section.title}
+                </h2>
+                <p className="text-text-secondary leading-relaxed">
+                  {section.content}
+                </p>
+              </div>
             </div>
           ))}
         </div>

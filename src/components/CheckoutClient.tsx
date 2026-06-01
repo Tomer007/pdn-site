@@ -144,22 +144,33 @@ export function CheckoutClient({ dict, locale }: Props) {
             <span className="font-bold">{dict.common.currency}{basePrice.toLocaleString()}</span>
           </div>
 
-          {/* Addon checkbox */}
+          {/* Addon - highlighted card */}
           {program.addonPrice > 0 && (
-            <label className="flex items-center gap-3 p-3 bg-paper rounded-lg cursor-pointer">
-              <input
-                type="checkbox"
-                checked={includeAddon}
-                onChange={(e) => setIncludeAddon(e.target.checked)}
-                className="w-4 h-4 accent-gold"
-              />
-              <span className="flex-1 text-sm">
-                {dict.checkout.addon_checkbox}
-              </span>
-              <span className="text-sm font-bold">
-                +{dict.common.currency}{addonPrice}
-              </span>
-            </label>
+            <div className={`p-4 rounded-xl cursor-pointer transition-all duration-300 border-2 ${
+              includeAddon 
+                ? "border-gold bg-gold/10 shadow-md" 
+                : "border-border bg-paper hover:border-gold/50"
+            }`} onClick={() => setIncludeAddon(!includeAddon)}>
+              <label className="flex items-center gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={includeAddon}
+                  onChange={(e) => setIncludeAddon(e.target.checked)}
+                  className="w-5 h-5 accent-gold"
+                />
+                <div className="flex-1">
+                  <span className="font-bold text-sm block">
+                    {dict.checkout.addon_checkbox}
+                  </span>
+                  <span className="text-xs text-text-secondary">
+                    {locale === "he" ? "פגישת זום אישית עם מאבחן מוסמך" : "Personal Zoom session with certified assessor"}
+                  </span>
+                </div>
+                <span className="text-sm font-bold text-gold">
+                  +{dict.common.currency}{addonPrice}
+                </span>
+              </label>
+            </div>
           )}
         </div>
 

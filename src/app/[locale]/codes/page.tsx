@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { getDictionary } from "@/i18n/dictionaries";
 import { type Locale } from "@/i18n/config";
+import { CodesAccordion } from "@/components/CodesAccordion";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -205,49 +206,13 @@ export default async function CodesPage({
         </div>
       </section>
 
-      {/* The 12 Codes - Full Detail */}
+      {/* The 12 Codes - Accordion */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-display font-bold text-center mb-12">
             {locale === "he" ? "ארבעת המושכים ו-12 הצפנים" : "The Four Attractors & 12 Ciphers"}
           </h2>
-
-          <div className="space-y-12">
-            {codeGroups.map((group) => (
-              <div key={group.letter} className={`rounded-2xl border-2 ${group.color} bg-gradient-to-br ${group.bgGradient} p-6 sm:p-8`}>
-                {/* Group header */}
-                <div className="flex items-center gap-4 mb-2">
-                  <span className="text-4xl sm:text-5xl font-display font-bold text-navy">{group.letter}</span>
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-display font-bold">{group.name[locale]}</h3>
-                    <p className="text-sm text-text-secondary uppercase tracking-wide">{group.english}</p>
-                  </div>
-                </div>
-                <p className="text-text-secondary mb-2">{group.meaning[locale]}</p>
-                <p className="text-sm text-error/80 italic mb-6">{group.fear[locale]}</p>
-
-                {/* Individual codes */}
-                <div className="space-y-4">
-                  {group.codes.map((code) => (
-                    <div key={code.id} className="bg-white/80 backdrop-blur-sm rounded-xl p-5 border border-white shadow-sm">
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className="text-sm font-bold text-white bg-navy rounded-lg px-3 py-1 shadow">
-                          {code.id}
-                        </span>
-                        <h4 className="font-bold text-lg">{code.name[locale]}</h4>
-                        <span className="text-xs text-text-secondary ms-auto hidden sm:block">
-                          {code.energy[locale]}
-                        </span>
-                      </div>
-                      <p className="text-sm text-text-secondary leading-relaxed">
-                        {code.description[locale]}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+          <CodesAccordion codeGroups={codeGroups} locale={locale} />
         </div>
       </section>
 
