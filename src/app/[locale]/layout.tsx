@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
+import { CookieConsent } from "@/components/CookieConsent";
 import { locales, localeConfig, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 
@@ -65,6 +66,7 @@ export default async function LocaleLayout({
         <Footer locale={locale} dict={dict} />
         <WhatsAppButton />
         <BackToTop />
+        <CookieConsent dict={dict} locale={locale} />
       </body>
     </html>
   );

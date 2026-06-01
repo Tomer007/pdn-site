@@ -159,5 +159,42 @@
     "loading": "Loading...",
     "error": "Error",
     "success": "Success"
+  },
+  "homepage_intro": {
+    "title": "\"Source Code\" - Your Main Navigator to Success",
+    "body": "The personal \"Source Code\" assessment is a breakthrough for developing your personal potential to navigate your life to success. We offer focused courses and empowering lessons, through a fascinating journey of self-discovery and learning a new language.",
+    "ahava": "\"Source Code\" is built from four core elements that shape and navigate every person's path. Together, they form the Hebrew acronym for 'Love' (AHAVA) - the code that navigates you to personal development, purpose precision, and fulfillment.",
+    "ahava_letters": "A · H · B · H = AHAVA (Love)"
+  },
+  "consciousness_star": {
+    "title": "The Consciousness Star",
+    "subtitle": "Enter a new world and discover the strengths of the ciphers",
+    "cta": "Explore the Ciphers"
+  },
+  "waze_block": {
+    "title": "Your Navigator is Like WAZE FOR LIFE",
+    "body": "No matter which area you want to fulfill - career, family, relationships, self-confidence. The key is to know your \"inner navigator\" - your personal cipher and compass to success."
+  },
+  "quote": {
+    "robin_sharma": "\"A person is a creation in progress. Invest in it. There will never be a more suitable moment than today to be your best self.\"",
+    "robin_sharma_author": "Robin Sharma"
+  },
+  "challenge_event": {
+    "title": "Introduction Evening with Source Code Intelligence",
+    "subtitle": "Register for the first evening - free of charge",
+    "includes": [
+      "Personal Source Code assessment for every registrant",
+      "Extended Source Code map with results and action directions",
+      "Live demonstration with the AI"
+    ],
+    "interest_title": "Interested?",
+    "interest_subtitle": "Register and receive details for the next \"21-Day Challenge with Source Code Intelligence\"",
+    "interest_button": "Get Details"
+  },
+  "cookie_consent": {
+    "message": "This site uses cookies to improve your browsing experience",
+    "accept": "Accept",
+    "reject": "Reject All",
+    "settings": "Settings"
   }
 }

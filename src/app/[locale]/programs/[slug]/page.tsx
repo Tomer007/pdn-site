@@ -235,6 +235,14 @@ export default async function ProgramPage({
       {/* Sticky CTA (bottom) */}
       <section className="py-12 bg-navy text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
+          {/* Quote */}
+          {program.quote && (
+            <blockquote className="mb-8 text-white/70 italic text-lg border-s-4 border-gold ps-4 text-start max-w-lg mx-auto">
+              <p>{program.quote.text[locale]}</p>
+              <cite className="text-gold text-sm not-italic mt-2 block">{program.quote.author}</cite>
+            </blockquote>
+          )}
+
           <h2 className="text-xl sm:text-2xl font-display font-bold mb-4">
             {program.name[locale]}
           </h2>
@@ -246,7 +254,7 @@ export default async function ProgramPage({
             )}
             <Link
               href={`/${locale}/checkout?program=${program.slug}`}
-              className="bg-gold hover:bg-gold-hover text-navy font-bold px-8 py-3.5 rounded text-lg transition-colors"
+              className="bg-gold hover:bg-gold-hover text-navy font-bold px-8 py-3.5 rounded-lg text-lg transition-all duration-300 hover:shadow-[0_0_30px_rgba(200,160,78,0.4)]"
             >
               {dict.programs[program.tier]?.cta || dict.programs.choose_cta}
             </Link>
@@ -258,6 +266,35 @@ export default async function ProgramPage({
           )}
         </div>
       </section>
+
+      {/* Challenge Event Section */}
+      {program.hasEvent && (
+        <section className="py-12 bg-paper border-t border-border">
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 className="text-xl font-display font-bold mb-2">
+              {dict.challenge_event.title}
+            </h3>
+            <p className="text-sm text-text-secondary mb-4">
+              {dict.challenge_event.subtitle}
+            </p>
+            <ul className="text-sm text-text-secondary space-y-2 mb-6 text-start max-w-md mx-auto">
+              {dict.challenge_event.includes.map((item: string, i: number) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span className="text-gold shrink-0">✦</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="bg-white border border-gold/20 rounded-xl p-6">
+              <p className="font-bold mb-1">{dict.challenge_event.interest_title}</p>
+              <p className="text-sm text-text-secondary mb-4">{dict.challenge_event.interest_subtitle}</p>
+              <button className="bg-gold hover:bg-gold-hover text-navy font-bold px-6 py-3 rounded-lg transition-colors">
+                {dict.challenge_event.interest_button}
+              </button>
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 }

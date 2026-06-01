@@ -15,6 +15,8 @@ export type Program = {
   courses: { name: { he: string; en: string }; lessons: number; description: { he: string; en: string } }[];
   steps: { he: string[]; en: string[] };
   assessmentDetails?: { he: string; en: string };
+  quote?: { text: { he: string; en: string }; author: string };
+  hasEvent?: boolean;
 };
 
 export const programs: Program[] = [
@@ -162,6 +164,13 @@ export const programs: Program[] = [
       he: ["נרשמים ועוברים לתשלום", "ממלאים אבחון חדשני", "מקבלים את מפת קוד המקור תוך שבוע", "מקבלים גישה לקורסים"],
       en: ["Register and pay", "Complete innovative assessment", "Receive your Source Code map within a week", "Get access to courses"],
     },
+    quote: {
+      text: {
+        he: "\"האדם הוא יצירה בהתהוות, השקיעו בה, לעולם לא יהיה רגע מתאים מהיום להיות את/ה הטוב ביותר\"",
+        en: "\"A person is a creation in progress. Invest in it. There will never be a more suitable moment than today to be your best self.\"",
+      },
+      author: "Robin Sharma",
+    },
   },
   {
     slug: "challenge",
@@ -220,6 +229,14 @@ export const programs: Program[] = [
     steps: {
       he: ["הרשמה לאתגר", "אבחון אישי + מפת קוד מקור", "21 ימים של ליווי יומי עם הבינה", "מפגשי זום + סיכום חגיגי"],
       en: ["Register for the challenge", "Personal assessment + Source Code map", "21 days of daily AI coaching", "Zoom sessions + celebratory summary"],
+    },
+    hasEvent: true,
+    quote: {
+      text: {
+        he: "\"האדם הוא יצירה בהתהוות, השקיעו בה, לעולם לא יהיה רגע מתאים מהיום להיות את/ה הטוב ביותר\"",
+        en: "\"A person is a creation in progress. Invest in it. There will never be a more suitable moment than today to be your best self.\"",
+      },
+      author: "Robin Sharma",
     },
   },
 ];

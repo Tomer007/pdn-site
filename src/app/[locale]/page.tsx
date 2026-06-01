@@ -2,10 +2,12 @@ import { getDictionary } from "@/i18n/dictionaries";
 import { type Locale } from "@/i18n/config";
 import { Hero } from "@/components/Hero";
 import { SocialProofBar } from "@/components/SocialProofBar";
+import { HomepageIntro } from "@/components/HomepageIntro";
 import { ProgramsPreview } from "@/components/ProgramsPreview";
 import { CodesTeaser } from "@/components/CodesTeaser";
 import { MethodSection } from "@/components/MethodSection";
 import { FounderSection } from "@/components/FounderSection";
+import { ConsciousnessStar } from "@/components/ConsciousnessStar";
 import { ProofSection } from "@/components/ProofSection";
 import { EmailCapture } from "@/components/EmailCapture";
 
@@ -22,8 +24,10 @@ export default async function HomePage({
     <>
       <Hero dict={dict} locale={locale} />
       <SocialProofBar locale={locale} />
+      <HomepageIntro dict={dict} locale={locale} />
       <ProgramsPreview dict={dict} locale={locale} />
       <CodesTeaser dict={dict} locale={locale} />
+      <ConsciousnessStar dict={dict} locale={locale} />
       <MethodSection dict={dict} locale={locale} />
       <FounderSection dict={dict} locale={locale} />
       <ProofSection dict={dict} locale={locale} />
