@@ -40,11 +40,19 @@ export function Navbar({ locale, dict }: NavbarProps) {
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-2">
             <Image
+              src="/images/pdn-logo-round.png"
+              alt="PDN Center - נווט חייך להצלחה"
+              width={40}
+              height={40}
+              className="h-9 w-9 rounded-full"
+              priority
+            />
+            <Image
               src="/images/logo-nav.png"
-              alt="PDN - קוד המקור"
-              width={160}
-              height={36}
-              className="h-8 sm:h-9 w-auto"
+              alt="PDN"
+              width={120}
+              height={27}
+              className="h-7 w-auto hidden sm:block"
               priority
             />
           </Link>

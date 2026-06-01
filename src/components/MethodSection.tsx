@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { type Locale } from "@/i18n/config";
 import { FadeInView } from "@/components/animations/FadeInView";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 
 type Props = {
   dict: Record<string, any>;
@@ -42,6 +43,16 @@ export function MethodSection({ dict, locale }: Props) {
           </FadeInView>
 
           <FadeInView delay={0.5}>
+            <div className="mt-8 mb-8">
+              <YouTubeEmbed
+                videoId="2G9wOQLf6dc"
+                title={locale === "he" ? "שיטת PDN - קוד המקור" : "PDN Method - Source Code"}
+                className="shadow-lg max-w-2xl mx-auto"
+              />
+            </div>
+          </FadeInView>
+
+          <FadeInView delay={0.6}>
             <Link
               href={`/${locale}/method`}
               className="inline-flex border-2 border-navy hover:bg-navy hover:text-white text-navy font-bold text-sm px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg"
