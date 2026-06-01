@@ -20,8 +20,8 @@ const faqItems: FAQItem[] = [
       en: "What is the \"Source Code\"?",
     },
     answer: {
-      he: "\"קוד המקור\" הוא צופן אישי וייחודי, המשמש כמצפן פנימי לניווט חייך להצלחה. הוא מבוסס על שיטת PDN — Personal Development Navigator, שנרשמה כפטנט בינלאומי ומבוססת על 30 שנות מחקר בחקר התודעה.",
-      en: "The \"Source Code\" is a unique personal cipher that serves as an inner compass for navigating your life to success. It's based on the PDN method — Personal Development Navigator, registered as an international patent and based on 30 years of consciousness research.",
+      he: "\"קוד המקור\" הוא צופן אישי וייחודי, המשמש כמצפן פנימי לניווט חייך להצלחה. הוא מבוסס על שיטת PDN - Personal Development Navigator, שנרשמה כפטנט בינלאומי ומבוססת על 30 שנות מחקר בחקר התודעה.",
+      en: "The \"Source Code\" is a unique personal cipher that serves as an inner compass for navigating your life to success. It's based on the PDN method - Personal Development Navigator, registered as an international patent and based on 30 years of consciousness research.",
     },
   },
   {
@@ -40,8 +40,8 @@ const faqItems: FAQItem[] = [
       en: "What's the difference between the programs?",
     },
     answer: {
-      he: "מסלול \"לגלות\" כולל אבחון ומפה אישית — טעימה ראשונה. מסלול \"התמרה\" מוסיף שני קורסים דיגיטליים (59 שיעורים) להעמקה. \"אתגר 21 יום\" הוא הליווי האינטנסיבי ביותר — כולל מאמן AI יומי, מפגשי זום וקהילה.",
-      en: "\"Discover\" includes assessment and personal map — a first taste. \"Transformation\" adds two digital courses (59 lessons) for deeper learning. \"21-Day Challenge\" is the most intensive — includes daily AI coach, Zoom sessions, and community.",
+      he: "מסלול \"לגלות\" כולל אבחון ומפה אישית - טעימה ראשונה. מסלול \"התמרה\" מוסיף שני קורסים דיגיטליים (59 שיעורים) להעמקה. \"אתגר 21 יום\" הוא הליווי האינטנסיבי ביותר - כולל מאמן AI יומי, מפגשי זום וקהילה.",
+      en: "\"Discover\" includes assessment and personal map - a first taste. \"Transformation\" adds two digital courses (59 lessons) for deeper learning. \"21-Day Challenge\" is the most intensive - includes daily AI coach, Zoom sessions, and community.",
     },
   },
   {
@@ -70,8 +70,8 @@ const faqItems: FAQItem[] = [
       en: "I have a coupon code, where do I enter it?",
     },
     answer: {
-      he: "בעמוד הצ'קאאוט (לאחר בחירת מסלול) יש שדה קופון ברור. הזן את הקוד ולחץ \"החל\" — ההנחה תופיע מיד.",
-      en: "On the checkout page (after choosing a program) there's a clear coupon field. Enter the code and click \"Apply\" — the discount will appear immediately.",
+      he: "בעמוד הצ'קאאוט (לאחר בחירת מסלול) יש שדה קופון ברור. הזן את הקוד ולחץ \"החל\" - ההנחה תופיע מיד.",
+      en: "On the checkout page (after choosing a program) there's a clear coupon field. Enter the code and click \"Apply\" - the discount will appear immediately.",
     },
   },
 ];

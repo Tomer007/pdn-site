@@ -72,7 +72,7 @@ export default async function CodesPage({
       <section className="bg-navy text-white py-16 sm:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4">
-            {locale === "he" ? "\"קוד המקור\" — 12 הצפנים" : "\"Source Code\" — The 12 Ciphers"}
+            {locale === "he" ? "\"קוד המקור\" - 12 הצפנים" : "\"Source Code\" - The 12 Ciphers"}
           </h1>
           <p className="text-white/80 leading-relaxed max-w-2xl mx-auto">
             {locale === "he"

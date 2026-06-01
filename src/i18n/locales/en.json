@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "PDN — Source Code | Navigate Your Life to Success",
-    "description": "PDN Method — Personal Development Navigator. Discover your Source Code and navigate your life to success. Internationally registered patent."
+    "title": "PDN - Source Code | Navigate Your Life to Success",
+    "description": "PDN Method - Personal Development Navigator. Discover your Source Code and navigate your life to success. Internationally registered patent."
   },
   "nav": {
     "method": "The Method",
@@ -14,20 +14,20 @@
     "cta": "Find Your Path"
   },
   "hero": {
-    "headline": "What if you could discover your \"Source Code\" — your cipher to success?",
+    "headline": "What if you could discover your \"Source Code\" - your cipher to success?",
     "subheadline": "An innovative assessment to discover your inner navigator, based on 30 years of research. Internationally registered patent.",
     "cta_primary": "Take the Assessment",
     "cta_secondary": "How Does It Work?"
   },
   "onboarding": {
     "title": "New Here? Start Here",
-    "subtitle": "A clear path for beginners — take the assessment or watch a short explainer"
+    "subtitle": "A clear path for beginners - take the assessment or watch a short explainer"
   },
   "programs": {
     "section_title": "Start Navigating Your Life to Success",
     "compare_cta": "Compare All Programs",
     "page_title": "Choose Your Path to Navigate to Success",
-    "page_subtitle": "3 programs, one code — at the pace and depth that suits you",
+    "page_subtitle": "3 programs, one code - at the pace and depth that suits you",
     "popular_badge": "Most Popular",
     "choose_cta": "Choose Program",
     "addon_label": "Personal consultation with assessor",
@@ -68,7 +68,7 @@
   },
   "codes": {
     "section_title": "The Four Codes of \"Source Code\"",
-    "section_subtitle": "E · A · T · P — Four core elements that shape and navigate every person's path",
+    "section_subtitle": "E · A · T · P - Four core elements that shape and navigate every person's path",
     "cta": "Explore the Codes",
     "e": {
       "letter": "E",
@@ -96,10 +96,10 @@
     }
   },
   "method": {
-    "section_title": "The Method for Success — P.D.N",
-    "section_subtitle": "Personal Development Navigator — Internationally Registered Patent",
-    "description": "The P.D.N method specializes in assessing people through a unique and innovative approach registered as a patent worldwide. The method brings a powerful new tool to the world — discovering the unique \"Source Code\" for each person's consciousness development.",
-    "core": "The innovation in the method is the \"Source Code\" — a navigator for personal development, enabling a person to face life's challenges with ease and navigate their life to success. At its foundation is identifying the root fears and strengths of the individual.",
+    "section_title": "The Method for Success - P.D.N",
+    "section_subtitle": "Personal Development Navigator - Internationally Registered Patent",
+    "description": "The P.D.N method specializes in assessing people through a unique and innovative approach registered as a patent worldwide. The method brings a powerful new tool to the world - discovering the unique \"Source Code\" for each person's consciousness development.",
+    "core": "The innovation in the method is the \"Source Code\" - a navigator for personal development, enabling a person to face life's challenges with ease and navigate their life to success. At its foundation is identifying the root fears and strengths of the individual.",
     "metaphor": "A tool that once discovered, you realize you've received an enormous gift for life. Like a \"GPS for Life\" that enables a person to reach their chosen destination.",
     "cta": "Read More About the Method"
   },
@@ -107,7 +107,7 @@
     "title": "Nice to Meet You",
     "name": "Pnina Ohana-Lublchik",
     "role": "Method Developer",
-    "short_bio": "For the past three decades, I've dedicated my life to searching for the \"diamond\" — that power and unique ability within every person to fulfill their purpose. Through my research, I discovered that every person carries a \"Source Code\" — an inner cipher and compass for consciousness transformation.",
+    "short_bio": "For the past three decades, I've dedicated my life to searching for the \"diamond\" - that power and unique ability within every person to fulfill their purpose. Through my research, I discovered that every person carries a \"Source Code\" - an inner cipher and compass for consciousness transformation.",
     "cta": "Read More About Pnina"
   },
   "proof": {

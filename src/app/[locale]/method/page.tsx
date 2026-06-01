@@ -5,13 +5,13 @@ import { type Locale } from "@/i18n/config";
 const methodContent = {
   he: {
     title: "אודות השיטה",
-    subtitle: "שיטת P.D.N — Personal Development Navigator",
+    subtitle: "שיטת P.D.N - Personal Development Navigator",
     patent: "הרשומה כפטנט בישראל ובארה\"ב",
     intro: "השיטה מביאה כלי חדש ועוצמתי לעולם, את גילוי הצופן הייחודי להתפתחותו של האדם, המהווה נווט אישי להצלחה.",
     sections: [
       {
         title: "החדשנות",
-        content: "החדשנות בשיטה הוא \"קוד המקור\" — צופן PDN נווט להתפתחות אישית, המאפשר לאדם להתמודד עם אתגרים שונים בחיים בקלות ולנווט חייו להצלחה. שביסודו מזהה את הפחדים השורשיים והחוזקות של הפרט ומעניק לו מפה אישית כיצד להשתחרר מהפחדים החוסמים אותו ולנווט דרכו להצלחה.",
+        content: "החדשנות בשיטה הוא \"קוד המקור\" - צופן PDN נווט להתפתחות אישית, המאפשר לאדם להתמודד עם אתגרים שונים בחיים בקלות ולנווט חייו להצלחה. שביסודו מזהה את הפחדים השורשיים והחוזקות של הפרט ומעניק לו מפה אישית כיצד להשתחרר מהפחדים החוסמים אותו ולנווט דרכו להצלחה.",
       },
       {
         title: "GPS לחיים",
@@ -31,24 +31,24 @@ const methodContent = {
       },
     ],
     vision_title: "חזון מרכז P.D.N",
-    vision_core: "אמנת הליבה העומדת בבסיס החזון של מרכז PDN היא: \"שלכל אדם יש כישרון — מתנה ייחודית לתת ולהשפיע לטובה על העולם\".",
+    vision_core: "אמנת הליבה העומדת בבסיס החזון של מרכז PDN היא: \"שלכל אדם יש כישרון - מתנה ייחודית לתת ולהשפיע לטובה על העולם\".",
     vision_body: "המטרה העיקרית שלנו היא להעצים כל אדם לגלותו ולהשתמש ביעילות בצופן התודעה, לאפשר לו ניווט קל להצלחה, למימוש הפוטנציאל הייחודי שלו והגשמת ייעודו בדומה לשימוש באפליקציית ניווט GPS פנימי המנווט למסע החיים.",
     vision_global: "החזון של מרכז P.D.N להפיץ את העקרונות של השיטה בקנה מידה עולמי. אנו שואפים לייצר עולם הפועל מתוך סובלנות והבנה, בכך לתרום תרומתנו ליצור \"כוכב תודעה\" טוב יותר.",
     cta: "גלה את המסלול שלך",
   },
   en: {
     title: "About the Method",
-    subtitle: "P.D.N Method — Personal Development Navigator",
+    subtitle: "P.D.N Method - Personal Development Navigator",
     patent: "Registered Patent in Israel and the USA",
-    intro: "The method brings a powerful new tool to the world — discovering the unique cipher for each person's development, serving as a personal navigator to success.",
+    intro: "The method brings a powerful new tool to the world - discovering the unique cipher for each person's development, serving as a personal navigator to success.",
     sections: [
       {
         title: "The Innovation",
-        content: "The innovation in the method is the \"Source Code\" — a PDN cipher navigator for personal development, enabling a person to face life's challenges with ease and navigate their life to success. At its foundation is identifying the root fears and strengths of the individual, providing a personal map for releasing blocking fears and navigating the path to success.",
+        content: "The innovation in the method is the \"Source Code\" - a PDN cipher navigator for personal development, enabling a person to face life's challenges with ease and navigate their life to success. At its foundation is identifying the root fears and strengths of the individual, providing a personal map for releasing blocking fears and navigating the path to success.",
       },
       {
         title: "GPS for Life",
-        content: "A tool that once discovered, you realize you've received an enormous gift for life — like a \"GPS for Life\" that enables a person to reach their chosen destination successfully.",
+        content: "A tool that once discovered, you realize you've received an enormous gift for life - like a \"GPS for Life\" that enables a person to reach their chosen destination successfully.",
       },
       {
         title: "Scientific Foundation",
@@ -64,8 +64,8 @@ const methodContent = {
       },
     ],
     vision_title: "P.D.N Center Vision",
-    vision_core: "The core charter at the foundation of PDN Center's vision is: \"Every person has a talent — a unique gift to give and positively influence the world.\"",
-    vision_body: "Our main goal is to empower every person to discover and effectively use their consciousness cipher, enabling easy navigation to success, fulfillment of their unique potential and purpose — similar to using an internal GPS navigation app for life's journey.",
+    vision_core: "The core charter at the foundation of PDN Center's vision is: \"Every person has a talent - a unique gift to give and positively influence the world.\"",
+    vision_body: "Our main goal is to empower every person to discover and effectively use their consciousness cipher, enabling easy navigation to success, fulfillment of their unique potential and purpose - similar to using an internal GPS navigation app for life's journey.",
     vision_global: "PDN Center's vision is to spread the method's principles on a global scale. We aspire to create a world operating from tolerance and understanding, contributing to creating a better \"consciousness star.\"",
     cta: "Find Your Path",
   },

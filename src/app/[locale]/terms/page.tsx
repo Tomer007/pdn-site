@@ -31,7 +31,7 @@ export default async function TermsPage({
             </ul>
 
             <h2>קניין רוחני</h2>
-            <p>כל התכנים באתר, כולל שיטת PDN, הקורסים, והחומרים — הם קניין רוחני של פנינה לובלצ׳יק ומרכז PDN. אין להעתיק, להפיץ או לעשות שימוש מסחרי ללא אישור בכתב.</p>
+            <p>כל התכנים באתר, כולל שיטת PDN, הקורסים, והחומרים - הם קניין רוחני של פנינה לובלצ׳יק ומרכז PDN. אין להעתיק, להפיץ או לעשות שימוש מסחרי ללא אישור בכתב.</p>
 
             <h2>אחריות</h2>
             <p>השירותים מוצעים כפי שהם (as-is). מרכז PDN אינו מבטיח תוצאות ספציפיות. השיטה היא כלי להבנה עצמית ואינה מהווה תחליף לטיפול מקצועי.</p>
@@ -55,7 +55,7 @@ export default async function TermsPage({
             </ul>
 
             <h2>Intellectual Property</h2>
-            <p>All content on the site, including the PDN method, courses, and materials — are the intellectual property of Pnina Lublchik and PDN Center. No copying, distribution, or commercial use without written permission.</p>
+            <p>All content on the site, including the PDN method, courses, and materials - are the intellectual property of Pnina Lublchik and PDN Center. No copying, distribution, or commercial use without written permission.</p>
 
             <h2>Liability</h2>
             <p>Services are offered as-is. PDN Center does not guarantee specific results. The method is a tool for self-understanding and is not a substitute for professional treatment.</p>

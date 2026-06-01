@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
       abandonedCarts.push(cartEntry);
     }
 
-    console.log(`[Abandoned Cart] ${email} — ${programSlug} — ₪${amount}`);
+    console.log(`[Abandoned Cart] ${email} - ${programSlug} - ₪${amount}`);
 
     // TODO: In production:
     // 1. Store in database

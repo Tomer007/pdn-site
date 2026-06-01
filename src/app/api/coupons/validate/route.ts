@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Coupon data — in production this would come from a database/CMS
+// Coupon data - in production this would come from a database/CMS
 const COUPONS = [
   {
     code: "PNINA20",

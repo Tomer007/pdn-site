@@ -28,8 +28,8 @@ export async function generateMetadata({
   if (!program) return {};
 
   const title = locale === "he"
-    ? `${program.name.he} | PDN — קוד המקור`
-    : `${program.name.en} | PDN — Source Code`;
+    ? `${program.name.he} | PDN - קוד המקור`
+    : `${program.name.en} | PDN - Source Code`;
   const description = program.heroDescription[locale].slice(0, 160);
 
   return {

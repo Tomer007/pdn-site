@@ -65,7 +65,7 @@ const features: Feature[] = [
   },
   {
     name: { he: "גישה לקורסים", en: "Course Access Duration" },
-    discover: { he: "—", en: "—" },
+    discover: { he: "-", en: "-" },
     transformation: { he: "180 יום", en: "180 days" },
     challenge: { he: "180 יום", en: "180 days" },
   },
@@ -73,7 +73,7 @@ const features: Feature[] = [
 
 function CellValue({ value, locale }: { value: CellVal; locale: Locale }) {
   if (value === true) return <span className="text-gold text-lg">✔</span>;
-  if (value === false) return <span className="text-border">—</span>;
+  if (value === false) return <span className="text-border">-</span>;
   if (typeof value === "string") return <span className="text-xs text-text-secondary">{value}</span>;
   return <span className="text-xs text-text-secondary">{value[locale]}</span>;
 }

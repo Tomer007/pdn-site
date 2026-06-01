@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Colors — PDN Design System */
+  /* Colors - PDN Design System */
   --color-navy: #222845;
   --color-indigo: #2E3559;
   --color-gold: #C8A04E;

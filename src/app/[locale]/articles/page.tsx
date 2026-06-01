@@ -15,8 +15,8 @@ export default async function ArticlesPage({
     {
       title: { he: "מהו \"קוד המקור\" ואיך הוא עובד?", en: "What is the \"Source Code\" and how does it work?" },
       excerpt: {
-        he: "מבוא לשיטת PDN — הכלי החדשני שמאפשר לכל אדם לגלות את הנווט הפנימי שלו להצלחה.",
-        en: "An introduction to the PDN method — the innovative tool that enables every person to discover their inner navigator to success.",
+        he: "מבוא לשיטת PDN - הכלי החדשני שמאפשר לכל אדם לגלות את הנווט הפנימי שלו להצלחה.",
+        en: "An introduction to the PDN method - the innovative tool that enables every person to discover their inner navigator to success.",
       },
       slug: "what-is-source-code",
     },
@@ -31,8 +31,8 @@ export default async function ArticlesPage({
     {
       title: { he: "מתודעה הישרדותית לתודעת שפע", en: "From Survival Consciousness to Abundance" },
       excerpt: {
-        he: "המעבר מתודעה הישרדותית לתודעה גבוהה — הסוד של 10% המצליחים בעולם.",
-        en: "The shift from survival consciousness to higher consciousness — the secret of the world's top 10%.",
+        he: "המעבר מתודעה הישרדותית לתודעה גבוהה - הסוד של 10% המצליחים בעולם.",
+        en: "The shift from survival consciousness to higher consciousness - the secret of the world's top 10%.",
       },
       slug: "survival-to-abundance",
     },

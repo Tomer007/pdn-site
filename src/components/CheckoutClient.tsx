@@ -276,7 +276,7 @@ export function CheckoutClient({ dict, locale }: Props) {
             type="submit"
             className="w-full bg-gold hover:bg-gold-hover text-navy font-bold text-lg py-4 rounded-lg transition-colors"
           >
-            {dict.checkout.pay_button} — {dict.common.currency}{total.toLocaleString()}
+            {dict.checkout.pay_button} - {dict.common.currency}{total.toLocaleString()}
           </button>
 
           <p className="text-center text-xs text-text-secondary mt-3">

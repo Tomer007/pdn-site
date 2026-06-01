@@ -22,10 +22,10 @@ export default async function PrivacyPage({
 
             <h2>מידע שאנו אוספים</h2>
             <ul>
-              <li>שם מלא, כתובת אימייל ומספר טלפון — בעת הרשמה לתוכנית או יצירת קשר</li>
-              <li>תשובות לשאלון האבחון — לצורך גילוי &quot;קוד המקור&quot; האישי שלך</li>
-              <li>הקלטת קול — כחלק מתהליך האבחון</li>
-              <li>פרטי תשלום — מעובדים באופן מאובטח דרך Meshulam ואינם נשמרים אצלנו</li>
+              <li>שם מלא, כתובת אימייל ומספר טלפון - בעת הרשמה לתוכנית או יצירת קשר</li>
+              <li>תשובות לשאלון האבחון - לצורך גילוי &quot;קוד המקור&quot; האישי שלך</li>
+              <li>הקלטת קול - כחלק מתהליך האבחון</li>
+              <li>פרטי תשלום - מעובדים באופן מאובטח דרך Meshulam ואינם נשמרים אצלנו</li>
             </ul>
 
             <h2>שימוש במידע</h2>
@@ -50,10 +50,10 @@ export default async function PrivacyPage({
 
             <h2>Information We Collect</h2>
             <ul>
-              <li>Full name, email address, and phone number — upon registration or contact</li>
-              <li>Assessment questionnaire responses — for discovering your personal &quot;Source Code&quot;</li>
-              <li>Voice recording — as part of the assessment process</li>
-              <li>Payment details — processed securely through Meshulam and not stored by us</li>
+              <li>Full name, email address, and phone number - upon registration or contact</li>
+              <li>Assessment questionnaire responses - for discovering your personal &quot;Source Code&quot;</li>
+              <li>Voice recording - as part of the assessment process</li>
+              <li>Payment details - processed securely through Meshulam and not stored by us</li>
             </ul>
 
             <h2>Use of Information</h2>

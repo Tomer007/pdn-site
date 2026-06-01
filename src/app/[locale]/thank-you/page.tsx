@@ -36,7 +36,7 @@ export default async function ThankYouPage({
           <ol className="space-y-3 text-sm text-text-secondary">
             <li className="flex items-start gap-3">
               <span className="w-6 h-6 rounded-full bg-gold text-navy font-bold flex items-center justify-center shrink-0 text-xs">1</span>
-              <span>{locale === "he" ? "בדוק את המייל — קישור לאבחון נשלח אליך" : "Check your email — assessment link has been sent"}</span>
+              <span>{locale === "he" ? "בדוק את המייל - קישור לאבחון נשלח אליך" : "Check your email - assessment link has been sent"}</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="w-6 h-6 rounded-full bg-gold text-navy font-bold flex items-center justify-center shrink-0 text-xs">2</span>

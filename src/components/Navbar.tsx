@@ -32,7 +32,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
           <Link href={`/${locale}`} className="flex items-center gap-2">
             <Image
               src="/images/logo-nav.png"
-              alt="PDN — קוד המקור"
+              alt="PDN - קוד המקור"
               width={160}
               height={36}
               className="h-8 sm:h-9 w-auto"

@@ -23,7 +23,7 @@ export function courseSchema(program: {
     description: program.description,
     provider: {
       "@type": "Organization",
-      name: "PDN — Personal Development Navigator",
+      name: "PDN - Personal Development Navigator",
       url: "https://www.pdn.co.il",
     },
     ...(program.price && {
@@ -56,7 +56,7 @@ export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "PDN — Personal Development Navigator",
+    name: "PDN - Personal Development Navigator",
     url: "https://www.pdn.co.il",
     logo: "https://www.pdn.co.il/logo.png",
     founder: {
