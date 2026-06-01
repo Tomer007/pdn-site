@@ -10,7 +10,7 @@ type Props = {
 
 export function YouTubeEmbed({ videoId, title = "PDN Video", className = "" }: Props) {
   const [loaded, setLoaded] = useState(false);
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
   // Lazy load: show thumbnail first, load iframe on click
   if (!loaded) {
