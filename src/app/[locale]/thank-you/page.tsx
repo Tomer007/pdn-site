@@ -1,6 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getDictionary } from "@/i18n/dictionaries";
 import { type Locale } from "@/i18n/config";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export default async function ThankYouPage({
   params,

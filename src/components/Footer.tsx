@@ -75,7 +75,7 @@ export function Footer({ locale, dict }: FooterProps) {
           <div>
             <h4 className="font-bold text-sm mb-3">{dict.footer.follow_us}</h4>
             <div className="flex gap-4 mb-4">
-              <a href="https://www.youtube.com/@PDNCenter" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-gold">YouTube</a>
+              <a href="https://www.youtube.com/@p.d.ncenter" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-gold">YouTube</a>
               <a href="https://www.facebook.com/PDNCODE/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-gold">Facebook</a>
               <a href="https://katzr.net/550025" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-gold">WhatsApp</a>
             </div>

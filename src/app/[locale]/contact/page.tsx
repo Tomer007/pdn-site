@@ -135,7 +135,7 @@ export default function ContactPage() {
                 <h3 className="font-bold mb-3">{content.social_title}</h3>
                 <div className="flex flex-col gap-3">
                   <a
-                    href="https://www.youtube.com/@PDNCenter"
+                    href="https://www.youtube.com/@p.d.ncenter"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-text-secondary hover:text-gold transition-colors"

@@ -33,9 +33,26 @@ export async function generateMetadata({
   const { locale: localeParam } = await params;
   const locale = localeParam as Locale;
   const dict = await getDictionary(locale);
+  const otherLocale = locale === "he" ? "en" : "he";
+  const baseUrl = "https://pdn-site.onrender.com";
+
   return {
     title: dict.meta.title,
     description: dict.meta.description,
+    openGraph: {
+      title: dict.meta.title,
+      description: dict.meta.description,
+      locale: locale === "he" ? "he_IL" : "en_US",
+      type: "website",
+      siteName: "PDN - קוד המקור",
+    },
+    alternates: {
+      canonical: `${baseUrl}/${locale}`,
+      languages: {
+        he: `${baseUrl}/he`,
+        en: `${baseUrl}/en`,
+      },
+    },
   };
 }
 

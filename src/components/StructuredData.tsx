@@ -69,7 +69,7 @@ export function organizationSchema() {
       contactType: "customer service",
     },
     sameAs: [
-      "https://www.youtube.com/@PDNCenter",
+      "https://www.youtube.com/@p.d.ncenter",
       "https://www.facebook.com/PDNCODE/",
     ],
   };

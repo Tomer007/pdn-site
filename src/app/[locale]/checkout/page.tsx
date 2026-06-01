@@ -1,7 +1,12 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 import { getDictionary } from "@/i18n/dictionaries";
 import { type Locale } from "@/i18n/config";
 import { CheckoutClient } from "@/components/CheckoutClient";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export default async function CheckoutPage({
   params,

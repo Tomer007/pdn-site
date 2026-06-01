@@ -1,9 +1,25 @@
+import type { Metadata } from "next";
 import { getDictionary } from "@/i18n/dictionaries";
 import { type Locale } from "@/i18n/config";
 import { ProgramsComparison } from "@/components/ProgramsComparison";
 import { FeatureMatrix } from "@/components/FeatureMatrix";
 import { FAQ } from "@/components/FAQ";
 import { ProofSection } from "@/components/ProofSection";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://pdn-site.onrender.com";
+  const title = locale === "he" ? "המסלולים | PDN - קוד המקור" : "Programs | PDN - Source Code";
+  const description = locale === "he"
+    ? "השווה בין 3 מסלולים לגילוי קוד המקור שלך - לגלות, התמרה, ואתגר 21 יום. מצא את המסלול המתאים לך."
+    : "Compare 3 programs to discover your Source Code - Discover, Transformation, and 21-Day Challenge. Find the right path for you.";
+  return {
+    title,
+    description,
+    openGraph: { title, description },
+    alternates: { canonical: `${baseUrl}/${locale}/programs`, languages: { he: `${baseUrl}/he/programs`, en: `${baseUrl}/en/programs` } },
+  };
+}
 
 export default async function ProgramsPage({
   params,

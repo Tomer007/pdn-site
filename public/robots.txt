@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /*/checkout
+Disallow: /*/thank-you
+
+Sitemap: https://pdn-site.onrender.com/sitemap.xml
