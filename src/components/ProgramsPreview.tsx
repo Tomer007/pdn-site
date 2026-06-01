@@ -28,7 +28,7 @@ export function ProgramsPreview({ dict, locale }: Props) {
           </h2>
         </FadeInView>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mt-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mt-14 md:px-0 -mx-4 px-4 md:mx-0 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none flex md:grid">
           {programs.map(({ key, href }, index) => {
             const program = dict.programs[key];
             const isPopular = key === "transformation";
@@ -36,7 +36,7 @@ export function ProgramsPreview({ dict, locale }: Props) {
             return (
               <FadeInView key={key} delay={index * 0.15}>
                 <div
-                  className={`relative rounded-2xl border p-6 sm:p-8 flex flex-col bg-white card-hover ${
+                  className={`relative rounded-2xl border p-6 sm:p-8 flex flex-col bg-white card-hover min-w-[280px] md:min-w-0 snap-center ${
                     isPopular
                       ? "border-gold shadow-xl ring-2 ring-gold/20 scale-[1.02]"
                       : "border-border shadow-sm"
