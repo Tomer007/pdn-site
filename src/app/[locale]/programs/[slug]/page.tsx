@@ -99,6 +99,79 @@ export default async function ProgramPage({
         </div>
       </section>
 
+      {/* Challenge Section */}
+      {program.challenge && (
+        <section className="py-16 sm:py-20 bg-paper">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-display font-bold text-center mb-8">
+              {locale === "he" ? "האתגר שלך" : "Your Challenge"}
+            </h2>
+            <p className="text-text-secondary text-center mb-6">
+              {locale === "he"
+                ? "כמו רבים, אתה עשוי להרגיש תקוע, מבולבל, או שאתה פועל מתוך דפוסים ופחדים:"
+                : "Like many, you may feel stuck, confused, or acting from patterns and fears:"}
+            </p>
+            <ul className="space-y-3">
+              {program.challenge[locale].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-text-secondary">
+                  <span className="text-error shrink-0">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* Solution Section */}
+      {program.solution && (
+        <section className="py-16 sm:py-20 bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-display font-bold text-center mb-8">
+              {locale === "he" ? "הפתרון > שיטת PDN" : "The Solution > PDN Method"}
+            </h2>
+            <ul className="space-y-4">
+              {program.solution[locale].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 p-3 bg-paper rounded-lg">
+                  <span className="text-gold text-lg shrink-0">✔</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* Benefits Grid */}
+      {program.benefits && (
+        <section className="py-16 sm:py-20 bg-paper">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-display font-bold text-center mb-10">
+              {locale === "he" ? "נווט עם קוד המקור - הצופן שלך להצלחה" : "Navigate with Source Code - Your Cipher to Success"}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {program.benefits.map((benefit, i) => (
+                <div key={i} className="bg-white border border-border rounded-lg p-5">
+                  <h3 className="font-bold mb-2">{benefit.title[locale]}</h3>
+                  <p className="text-sm text-text-secondary">{benefit.description[locale]}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Assessment Details */}
+      {program.assessmentDetails && (
+        <section className="py-12 bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-lg text-text-secondary italic">
+              {program.assessmentDetails[locale]}
+            </p>
+          </div>
+        </section>
+      )}
+
       {/* What's Included */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -8,9 +8,13 @@ export type Program = {
   name: { he: string; en: string };
   subtitle: { he: string; en: string };
   heroDescription: { he: string; en: string };
+  challenge?: { he: string[]; en: string[] };
+  solution?: { he: string[]; en: string[] };
+  benefits?: { title: { he: string; en: string }; description: { he: string; en: string } }[];
   includes: { he: string[]; en: string[] };
   courses: { name: { he: string; en: string }; lessons: number; description: { he: string; en: string } }[];
   steps: { he: string[]; en: string[] };
+  assessmentDetails?: { he: string; en: string };
 };
 
 export const programs: Program[] = [
@@ -33,6 +37,70 @@ export const programs: Program[] = [
     includes: {
       he: ["אבחון \"קוד המקור\" האישי שלך", "מפת \"קוד המקור\" אישית"],
       en: ["Your personal \"Source Code\" Assessment", "Personal \"Source Code\" Map"],
+    },
+    challenge: {
+      he: [
+        "אתה לא באמת בטוח מי אתה, מה מייחד אותך ומה המטרה שלך",
+        "קשה לך להתחבר לביטחון עצמי יציב",
+        "אתה חוזר שוב ושוב לאותם דפוסים מעכבים מתוך פחד",
+        "מערכות היחסים שלך סובלות מחוסר הבהירות",
+        "עמוק בפנים אתה יודע שיש בך הרבה יותר פוטנציאל בתוכך",
+      ],
+      en: [
+        "You're not really sure who you are, what makes you unique, or what your purpose is",
+        "It's hard to connect to stable self-confidence",
+        "You keep returning to the same blocking patterns out of fear",
+        "Your relationships suffer from lack of clarity",
+        "Deep inside you know there's much more potential within you",
+      ],
+    },
+    solution: {
+      he: [
+        "הצופן שמסביר: למה אתה פועל כפי שאתה פועל, מה באמת מניע אותך ומהו מסלול הניווט המדויק עבורך",
+        "גילוי עמוק: הבן את \"קוד המקור\" האישי שלך",
+        "בהירות: קבל מפת דרכים ברורה כמו GPS לחיים שלך",
+        "שחרור: השתחרר מדפוסי פחד ואוטומטים שעוצרים אותך",
+        "הצלחה: נווט עבור הגשמה, משמעות ושגשוג בכל תחום החיים",
+        "תוצאות מוכחות: 30 שנות מחקר בחקר התודעה והתנהגות אנושית",
+      ],
+      en: [
+        "The code that explains: why you act the way you do, what truly drives you, and what's the precise navigation path for you",
+        "Deep discovery: understand your personal \"Source Code\"",
+        "Clarity: receive a clear roadmap like a GPS for your life",
+        "Release: free yourself from fear patterns and automatisms holding you back",
+        "Success: navigate toward fulfillment, meaning, and prosperity in all life areas",
+        "Proven results: 30 years of research in consciousness and human behavior",
+      ],
+    },
+    benefits: [
+      {
+        title: { he: "הבנה עמוקה של עצמך", en: "Deep Self-Understanding" },
+        description: { he: "גלה את החוזקות המרכזיות שלך, הכישורים הטבעיים שלך, והעיקרון שלך להצלחה", en: "Discover your core strengths, natural skills, and your principle for success" },
+      },
+      {
+        title: { he: "מפת דרכים ברורה", en: "Clear Roadmap" },
+        description: { he: "כמו GPS פנימי, תדע בדיוק לאן אתה הולך וכיצד להגיע להצלחה שאתה שואף", en: "Like an inner GPS, you'll know exactly where you're going and how to reach the success you aspire to" },
+      },
+      {
+        title: { he: "תמיכה מקצועית", en: "Professional Support" },
+        description: { he: "יעוץ אישי ממאבחנים מיומנים של PDN - פגישת זום אודות תוצאות הבחון", en: "Personal consultation from skilled PDN assessors - Zoom session about your results" },
+      },
+      {
+        title: { he: "זיהוי הייעוד שלך", en: "Identify Your Purpose" },
+        description: { he: "גלה את המתנה הייחודית שלך לתת לעולם ואת הייעוד שהגעת בו לבצע", en: "Discover your unique gift to give the world and the purpose you came to fulfill" },
+      },
+      {
+        title: { he: "כלים חדשניים", en: "Innovative Tools" },
+        description: { he: "קבל כלים מעשיים להשתחרר מפחדים ולפתיחת הדרך לניווט בהצלחה", en: "Receive practical tools to release fears and open the path to successful navigation" },
+      },
+      {
+        title: { he: "שגשוג בכל תחומי החיים", en: "Prosperity in All Life Areas" },
+        description: { he: "שיפור במערכות יחסים, קריירה, זוגיות, משפחה וביטחון עצמי", en: "Improvement in relationships, career, partnership, family, and self-confidence" },
+      },
+    ],
+    assessmentDetails: {
+      he: "מה ייתן לך האבחון והייעוץ? הסבר על מפת צופן אישית הכוללת: החוזקות שלך, הפחד שמונע ממך להשיג מטרות, המתנות שלך לעולם > הייעוד שלך.",
+      en: "What will the assessment and consultation give you? An explanation of a personal cipher map including: your strengths, the fear preventing you from achieving goals, your gifts to the world > your purpose.",
     },
     courses: [],
     steps: {
