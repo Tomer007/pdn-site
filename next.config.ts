@@ -1,9 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Standalone output for Docker/Render deployment
-  output: "standalone",
-
   // Image optimization
   images: {
     formats: ["image/avif", "image/webp"],
