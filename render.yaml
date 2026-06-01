@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: pdn-site
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3003"
+      - key: MESHULAM_PAGE_CODE
+        sync: false
+      - key: MESHULAM_API_KEY
+        sync: false

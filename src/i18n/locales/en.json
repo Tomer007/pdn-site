@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "title": "PDN — Source Code | Navigate Your Life to Success",
+    "description": "PDN Method — Personal Development Navigator. Discover your Source Code and navigate your life to success. Internationally registered patent."
+  },
+  "nav": {
+    "method": "The Method",
+    "programs": "Programs",
+    "codes": "The Codes",
+    "success": "Success Stories",
+    "about": "About Pnina",
+    "articles": "Articles",
+    "contact": "Contact",
+    "cta": "Find Your Path"
+  },
+  "hero": {
+    "headline": "What if you could discover your \"Source Code\" — your cipher to success?",
+    "subheadline": "An innovative assessment to discover your inner navigator, based on 30 years of research. Internationally registered patent.",
+    "cta_primary": "Take the Assessment",
+    "cta_secondary": "How Does It Work?"
+  },
+  "onboarding": {
+    "title": "New Here? Start Here",
+    "subtitle": "A clear path for beginners — take the assessment or watch a short explainer"
+  },
+  "programs": {
+    "section_title": "Start Navigating Your Life to Success",
+    "compare_cta": "Compare All Programs",
+    "page_title": "Choose Your Path to Navigate to Success",
+    "page_subtitle": "3 programs, one code — at the pace and depth that suits you",
+    "popular_badge": "Most Popular",
+    "choose_cta": "Choose Program",
+    "addon_label": "Personal consultation with assessor",
+    "discover": {
+      "name": "Discover",
+      "subtitle": "Discover Your Source Code",
+      "description": "Perfect for a first taste",
+      "includes": [
+        "\"Source Code\" Assessment",
+        "Personal \"Source Code\" Map"
+      ],
+      "cta": "Discover Your Code"
+    },
+    "transformation": {
+      "name": "Transformation",
+      "subtitle": "Transform with Source Code",
+      "description": "The choice of most graduates",
+      "includes": [
+        "Everything in Discover",
+        "\"The Main Engine\" Course (45 lessons)",
+        "\"The Full Code\" Course (14 lessons)",
+        "Personal consultation +₪480"
+      ],
+      "cta": "Start Your Transformation"
+    },
+    "challenge": {
+      "name": "21-Day Challenge",
+      "subtitle": "Source Code Intelligence Challenge",
+      "description": "The deepest, most intensive guidance",
+      "includes": [
+        "Everything in Transformation",
+        "Source Code AI Coach for 21 days",
+        "4 Zoom sessions + community",
+        "Active WhatsApp group"
+      ],
+      "cta": "Accept the Challenge"
+    }
+  },
+  "codes": {
+    "section_title": "The Four Codes of \"Source Code\"",
+    "section_subtitle": "E · A · T · P — Four core elements that shape and navigate every person's path",
+    "cta": "Explore the Codes",
+    "e": {
+      "letter": "E",
+      "name": "Mastery & Leadership",
+      "english": "Empower",
+      "meaning": "Navigate and lead our lives to fulfillment and meaning"
+    },
+    "a": {
+      "letter": "A",
+      "name": "Achievement & Success",
+      "english": "Achievement",
+      "meaning": "Navigate our lives to success and happiness"
+    },
+    "t": {
+      "letter": "T",
+      "name": "Security & Harmony",
+      "english": "Trust",
+      "meaning": "Navigate our lives to peace and harmony"
+    },
+    "p": {
+      "letter": "P",
+      "name": "Pleasure & Abundance",
+      "english": "Pleasure",
+      "meaning": "Navigate our lives to joy and abundance"
+    }
+  },
+  "method": {
+    "section_title": "The Method for Success — P.D.N",
+    "section_subtitle": "Personal Development Navigator — Internationally Registered Patent",
+    "description": "The P.D.N method specializes in assessing people through a unique and innovative approach registered as a patent worldwide. The method brings a powerful new tool to the world — discovering the unique \"Source Code\" for each person's consciousness development.",
+    "core": "The innovation in the method is the \"Source Code\" — a navigator for personal development, enabling a person to face life's challenges with ease and navigate their life to success. At its foundation is identifying the root fears and strengths of the individual.",
+    "metaphor": "A tool that once discovered, you realize you've received an enormous gift for life. Like a \"GPS for Life\" that enables a person to reach their chosen destination.",
+    "cta": "Read More About the Method"
+  },
+  "founder": {
+    "title": "Nice to Meet You",
+    "name": "Pnina Ohana-Lublchik",
+    "role": "Method Developer",
+    "short_bio": "For the past three decades, I've dedicated my life to searching for the \"diamond\" — that power and unique ability within every person to fulfill their purpose. Through my research, I discovered that every person carries a \"Source Code\" — an inner cipher and compass for consciousness transformation.",
+    "cta": "Read More About Pnina"
+  },
+  "proof": {
+    "title": "Graduates Share",
+    "subtitle": "PDN method graduates testify to the powerful tool they received to navigate their lives to success",
+    "cta": "Read Success Stories"
+  },
+  "email_capture": {
+    "title": "Stay Updated",
+    "subtitle": "Want to learn more about P.D.N? Join our mailing list",
+    "placeholder": "Email address",
+    "button": "Subscribe"
+  },
+  "footer": {
+    "three_options": "3 Ways to Start Fresh",
+    "follow_us": "Follow Us",
+    "email_label": "Email",
+    "sitemap": "Sitemap",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "All rights reserved to Pnina Lublchik, developer of the P.D.N method"
+  },
+  "checkout": {
+    "title": "Order Summary",
+    "coupon_placeholder": "Enter coupon code...",
+    "coupon_apply": "Apply",
+    "coupon_remove": "Remove Coupon",
+    "coupon_success": "Coupon applied successfully! {percent}% discount",
+    "coupon_invalid": "Invalid code. Please check and try again.",
+    "coupon_expired": "This coupon has expired. Contact us for a current offer.",
+    "coupon_used": "This coupon has already been redeemed.",
+    "coupon_wrong_program": "This coupon is not valid for this program.",
+    "discount_label": "Coupon Discount",
+    "total_label": "Total",
+    "saved_message": "You saved ₪{amount}!",
+    "your_details": "Your Details",
+    "name_field": "Full Name",
+    "email_field": "Email",
+    "phone_field": "Phone",
+    "pay_button": "Secure Payment",
+    "secure_note": "Secure payment via Meshulam · Installments available",
+    "addon_checkbox": "Personal consultation with PDN assessor",
+    "fill_all_fields": "Please fill in all fields."
+  },
+  "common": {
+    "currency": "₪",
+    "learn_more": "Learn More",
+    "back": "Back",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  }
+}
