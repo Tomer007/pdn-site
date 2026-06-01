@@ -36,6 +36,11 @@ h1, h2, h3 {
   font-family: var(--font-display);
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Focus styles for accessibility */
 :focus-visible {
   outline: 2px solid var(--color-gold);
@@ -59,12 +64,71 @@ h1, h2, h3 {
   top: 0;
 }
 
+/* Gold glow effect for CTAs */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(200, 160, 78, 0.3);
+}
+
+.glow-gold:hover {
+  box-shadow: 0 0 40px rgba(200, 160, 78, 0.5);
+}
+
+/* Gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #C8A04E 0%, #E8D5A0 50%, #C8A04E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section divider - cosmic wave */
+.section-divider {
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  height: 1px;
+  opacity: 0.3;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Cosmic gradient backgrounds */
+.bg-cosmic {
+  background: linear-gradient(180deg, #0f1629 0%, #222845 40%, #2E3559 100%);
+}
+
+.bg-cosmic-subtle {
+  background: linear-gradient(180deg, #222845 0%, #2E3559 100%);
+}
+
+/* Animated gradient border */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.border-gradient {
+  background: linear-gradient(135deg, var(--color-gold), var(--color-navy), var(--color-gold));
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
   }
 }
 

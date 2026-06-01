@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { type Locale } from "@/i18n/config";
+import { FadeInView } from "@/components/animations/FadeInView";
 
 type Props = {
   dict: Record<string, any>;
@@ -14,74 +17,83 @@ export function ProgramsPreview({ dict, locale }: Props) {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl font-display font-bold text-center mb-4">
-          {dict.programs.section_title}
-        </h2>
+    <section className="py-20 sm:py-28 bg-white relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #222845 1px, transparent 0)", backgroundSize: "40px 40px" }} aria-hidden="true" />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          {programs.map(({ key, href }) => {
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <FadeInView>
+          <h2 className="text-2xl sm:text-4xl font-display font-bold text-center mb-4">
+            {dict.programs.section_title}
+          </h2>
+        </FadeInView>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mt-14">
+          {programs.map(({ key, href }, index) => {
             const program = dict.programs[key];
             const isPopular = key === "transformation";
 
             return (
-              <div
-                key={key}
-                className={`relative rounded-lg border p-6 flex flex-col ${
-                  isPopular
-                    ? "border-gold shadow-lg ring-2 ring-gold/20"
-                    : "border-border"
-                }`}
-              >
-                {isPopular && (
-                  <span className="absolute -top-3 start-1/2 -translate-x-1/2 bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full">
-                    {dict.programs.popular_badge}
-                  </span>
-                )}
-
-                <h3 className="text-xl font-display font-bold mb-1">
-                  {program.name}
-                </h3>
-                <p className="text-sm text-text-secondary mb-4">
-                  {program.subtitle}
-                </p>
-                <p className="text-sm text-text-secondary mb-4">
-                  {program.description}
-                </p>
-
-                <ul className="flex-1 space-y-2 mb-6">
-                  {program.includes.map((item: string, i: number) => (
-                    <li key={i} className="flex items-start gap-2 text-sm">
-                      <span className="text-gold mt-0.5">✔</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href={href}
-                  className={`block text-center font-bold py-3 rounded transition-colors ${
+              <FadeInView key={key} delay={index * 0.15}>
+                <div
+                  className={`relative rounded-2xl border p-6 sm:p-8 flex flex-col bg-white card-hover ${
                     isPopular
-                      ? "bg-gold hover:bg-gold-hover text-navy"
-                      : "border-2 border-navy hover:bg-navy hover:text-white text-navy"
+                      ? "border-gold shadow-xl ring-2 ring-gold/20 scale-[1.02]"
+                      : "border-border shadow-sm"
                   }`}
                 >
-                  {program.cta}
-                </Link>
-              </div>
+                  {isPopular && (
+                    <span className="absolute -top-3.5 start-1/2 -translate-x-1/2 bg-gold text-navy text-xs font-bold px-4 py-1.5 rounded-full shadow-lg glow-gold">
+                      {dict.programs.popular_badge}
+                    </span>
+                  )}
+
+                  <h3 className="text-xl font-display font-bold mb-1 mt-2">
+                    {program.name}
+                  </h3>
+                  <p className="text-sm text-text-secondary mb-2">
+                    {program.subtitle}
+                  </p>
+                  <p className="text-sm text-text-secondary mb-5">
+                    {program.description}
+                  </p>
+
+                  <ul className="flex-1 space-y-2.5 mb-6">
+                    {program.includes.map((item: string, i: number) => (
+                      <li key={i} className="flex items-start gap-2.5 text-sm">
+                        <span className="text-gold mt-0.5 text-base">✦</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    href={href}
+                    className={`block text-center font-bold py-3.5 rounded-lg transition-all duration-300 ${
+                      isPopular
+                        ? "bg-gold hover:bg-gold-hover text-navy glow-gold hover:scale-105"
+                        : "border-2 border-navy hover:bg-navy hover:text-white text-navy"
+                    }`}
+                  >
+                    {program.cta}
+                  </Link>
+                </div>
+              </FadeInView>
             );
           })}
         </div>
 
-        <div className="text-center mt-8">
-          <Link
-            href={`/${locale}/programs`}
-            className="text-gold hover:underline font-bold"
-          >
-            {dict.programs.compare_cta} ←
-          </Link>
-        </div>
+        <FadeInView delay={0.5}>
+          <div className="text-center mt-10">
+            <Link
+              href={`/${locale}/programs`}
+              className="text-gold hover:underline font-bold text-lg group"
+            >
+              {dict.programs.compare_cta}{" "}
+              <span className="inline-block transition-transform group-hover:-translate-x-1">←</span>
+            </Link>
+          </div>
+        </FadeInView>
       </div>
     </section>
   );
