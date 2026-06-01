@@ -16,7 +16,7 @@ export default async function CheckoutPage({
     <section className="py-12 sm:py-16 bg-paper min-h-screen">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-2xl sm:text-3xl font-display font-bold text-center mb-10">
-          {dict.checkout.title}
+          {locale === "he" ? "השלמת הרכישה" : "Complete Your Purchase"}
         </h1>
         <Suspense fallback={<div className="text-center py-12">{dict.common.loading}</div>}>
           <CheckoutClient dict={dict} locale={locale} />

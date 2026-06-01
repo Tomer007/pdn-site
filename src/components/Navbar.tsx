@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { type Locale } from "@/i18n/config";
 
 type NavbarProps = {
@@ -12,7 +12,14 @@ type NavbarProps = {
 
 export function Navbar({ locale, dict }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const otherLocale = locale === "he" ? "en" : "he";
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { label: dict.nav.method, href: `/${locale}/method` },
@@ -25,7 +32,9 @@ export function Navbar({ locale, dict }: NavbarProps) {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-navy text-white">
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${
+      scrolled ? "bg-navy/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+    }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -63,7 +72,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
             </Link>
             <Link
               href={`/${locale}/programs`}
-              className="hidden sm:inline-flex bg-gold hover:bg-gold-hover text-navy font-bold text-sm px-4 py-2 rounded transition-colors"
+              className="hidden sm:inline-flex bg-gold hover:bg-gold-hover text-navy font-bold text-sm px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(200,160,78,0.3)]"
             >
               {dict.nav.cta}
             </Link>
@@ -87,7 +96,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
 
         {/* Mobile Nav */}
         {mobileOpen && (
-          <div className="lg:hidden pb-4 border-t border-white/10">
+          <div className="lg:hidden pb-4 border-t border-white/10 bg-navy/95 backdrop-blur-md rounded-b-xl">
             <div className="flex flex-col gap-2 pt-4">
               {navItems.map((item) => (
                 <Link
@@ -102,7 +111,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
               <Link
                 href={`/${locale}/programs`}
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 bg-gold text-navy font-bold text-sm px-4 py-2 rounded text-center"
+                className="mt-2 bg-gold text-navy font-bold text-sm px-4 py-2.5 rounded-lg text-center"
               >
                 {dict.nav.cta}
               </Link>

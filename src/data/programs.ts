@@ -166,7 +166,7 @@ export const programs: Program[] = [
   {
     slug: "challenge",
     tier: "challenge",
-    price: null,
+    price: 2800,
     priceWithAddon: null,
     addonPrice: 0,
     accessDays: 180,
