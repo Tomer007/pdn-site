@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { CookieConsent } from "@/components/CookieConsent";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import { locales, localeConfig, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 
@@ -81,6 +82,7 @@ export default async function LocaleLayout({
         <Navbar locale={locale} dict={dict} />
         <main id="main-content" className="flex-1">{children}</main>
         <Footer locale={locale} dict={dict} />
+        <ScrollProgress />
         <WhatsAppButton />
         <BackToTop />
         <CookieConsent dict={dict} locale={locale} />

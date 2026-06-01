@@ -1,8 +1,11 @@
 import { getDictionary } from "@/i18n/dictionaries";
 import { type Locale } from "@/i18n/config";
 import { Hero } from "@/components/Hero";
+import { SocialProofTicker } from "@/components/SocialProofTicker";
 import { SocialProofBar } from "@/components/SocialProofBar";
 import { HomepageIntro } from "@/components/HomepageIntro";
+import { MiniQuiz } from "@/components/MiniQuiz";
+import { JourneyTimeline } from "@/components/JourneyTimeline";
 import { ProgramsPreview } from "@/components/ProgramsPreview";
 import { CodesTeaser } from "@/components/CodesTeaser";
 import { MethodSection } from "@/components/MethodSection";
@@ -23,8 +26,11 @@ export default async function HomePage({
   return (
     <>
       <Hero dict={dict} locale={locale} />
+      <SocialProofTicker locale={locale} />
       <SocialProofBar locale={locale} />
       <HomepageIntro dict={dict} locale={locale} />
+      <MiniQuiz locale={locale} />
+      <JourneyTimeline locale={locale} />
       <ProgramsPreview dict={dict} locale={locale} />
       <CodesTeaser dict={dict} locale={locale} />
       <ConsciousnessStar dict={dict} locale={locale} />

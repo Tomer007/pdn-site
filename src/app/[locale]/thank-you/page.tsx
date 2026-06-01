@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getDictionary } from "@/i18n/dictionaries";
 import { type Locale } from "@/i18n/config";
+import { Confetti } from "@/components/Confetti";
 
 export const metadata: Metadata = {
   robots: { index: false, follow: false },
@@ -17,7 +18,9 @@ export default async function ThankYouPage({
   const dict = await getDictionary(locale);
 
   return (
-    <section className="py-20 sm:py-32 bg-white min-h-screen">
+    <>
+      <Confetti />
+      <section className="py-20 sm:py-32 bg-white min-h-screen">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Success icon */}
         <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-success/10 flex items-center justify-center">
@@ -70,5 +73,6 @@ export default async function ThankYouPage({
         </div>
       </div>
     </section>
+    </>
   );
 }

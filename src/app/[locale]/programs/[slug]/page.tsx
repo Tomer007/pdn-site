@@ -6,6 +6,7 @@ import { type Locale } from "@/i18n/config";
 import { programs, getProgramBySlug } from "@/data/programs";
 import { StickyBuyBar } from "@/components/StickyBuyBar";
 import { StructuredData, courseSchema } from "@/components/StructuredData";
+import { CountdownTimer } from "@/components/CountdownTimer";
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -269,7 +270,9 @@ export default async function ProgramPage({
 
       {/* Challenge Event Section */}
       {program.hasEvent && (
-        <section className="py-12 bg-paper border-t border-border">
+        <>
+          <CountdownTimer locale={locale} />
+          <section className="py-12 bg-paper border-t border-border">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h3 className="text-xl font-display font-bold mb-2">
               {dict.challenge_event.title}
@@ -294,6 +297,7 @@ export default async function ProgramPage({
             </div>
           </div>
         </section>
+        </>
       )}
     </>
   );
