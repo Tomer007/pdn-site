@@ -34,6 +34,25 @@ const methodContent = {
     vision_core: "אמנת הליבה העומדת בבסיס החזון של מרכז PDN היא: \"שלכל אדם יש כישרון - מתנה ייחודית לתת ולהשפיע לטובה על העולם\".",
     vision_body: "המטרה העיקרית שלנו היא להעצים כל אדם לגלותו ולהשתמש ביעילות בצופן התודעה, לאפשר לו ניווט קל להצלחה, למימוש הפוטנציאל הייחודי שלו והגשמת ייעודו בדומה לשימוש באפליקציית ניווט GPS פנימי המנווט למסע החיים.",
     vision_global: "החזון של מרכז P.D.N להפיץ את העקרונות של השיטה בקנה מידה עולמי. אנו שואפים לייצר עולם הפועל מתוך סובלנות והבנה, בכך לתרום תרומתנו ליצור \"כוכב תודעה\" טוב יותר.",
+    root_fears_title: "ארבעת הפחדים השורשיים",
+    root_fears_subtitle: "שיטת P.D.N מזהה ארבעה פחדים שורשיים שחוסמים את ההתפתחות האישית:",
+    root_fears: [
+      { name: "פחד מסכנות", description: "פחד מלקחת סיכונים, מהלא נודע, מלצאת מאזור הנוחות" },
+      { name: "פחד מבדידות", description: "פחד מדחייה, מניתוק, מלהיות לבד בדרך" },
+      { name: "פחד מכישלון", description: "פחד מטעויות, מאי-הצלחה, מאכזבת אחרים" },
+      { name: "פחד משיעבוד", description: "פחד מאובדן חופש, מתלות, ממחויבות מגבילה" },
+    ],
+    benefits_title: "איך שיטת P.D.N תעזור לך?",
+    benefits_subtitle: "שיטת P.D.N היא כלי פורץ דרך להתפתחות אישית. הנה איך זה עובד:",
+    benefits: [
+      { step: "1", title: "גילוי \"קוד המקור\"", description: "הכרת עצמך בדרך חדשה, אבחון המנוע הפנימי שמניע אותך - כמו GPS, שמראה לך את הדרך הבטוחה והמהירה ליעד." },
+      { step: "2", title: "מפחד לעוצמה", description: "שחרור פחדים. טכניקות ייחודיות שמאפשרות לשחרר חסמים ופחדים שמעכבים את ההתפתחות האישית שלך." },
+      { step: "3", title: "מתודעה הישרדותית לתודעת שפע", description: "תכנות מחדש של התת-מודע להתחברות לעוצמות הפנימיות לניווט להצלחה." },
+      { step: "4", title: "שיפור מערכות יחסים", description: "ללמוד שפה חדשה, כיצד ליצור תקשורת טובה עם כל אחד." },
+      { step: "5", title: "לחיות מתוך עוצמה וחופש בחירה", description: "ללמוד כיצד לקבל החלטות מטיבות עבורך לבריאת מציאות חדשה." },
+      { step: "6", title: "שיפור ביטחון עצמי", description: "לגלות את החוזקות והמתנות שלך, וללמוד איך למנף אותן להתמודד עם אתגרים ולהצלחה." },
+      { step: "7", title: "ניווט להצלחה", description: "מפה לניווט חייך, תלמדו כיצד לעקוף מכשולים ולנוע קדימה מתוך ביטחון עצמי ועוצמה פנימית להשגת יעדך והגשמת ייעודך." },
+    ],
     cta: "גלה את המסלול שלך",
   },
   en: {
@@ -67,6 +86,25 @@ const methodContent = {
     vision_core: "The core charter at the foundation of PDN Center's vision is: \"Every person has a talent - a unique gift to give and positively influence the world.\"",
     vision_body: "Our main goal is to empower every person to discover and effectively use their consciousness cipher, enabling easy navigation to success, fulfillment of their unique potential and purpose - similar to using an internal GPS navigation app for life's journey.",
     vision_global: "PDN Center's vision is to spread the method's principles on a global scale. We aspire to create a world operating from tolerance and understanding, contributing to creating a better \"consciousness star.\"",
+    root_fears_title: "The Four Root Fears",
+    root_fears_subtitle: "The P.D.N method identifies four root fears that block personal development:",
+    root_fears: [
+      { name: "Fear of Danger", description: "Fear of taking risks, of the unknown, of leaving the comfort zone" },
+      { name: "Fear of Loneliness", description: "Fear of rejection, disconnection, of being alone on the path" },
+      { name: "Fear of Failure", description: "Fear of mistakes, of not succeeding, of disappointing others" },
+      { name: "Fear of Enslavement", description: "Fear of losing freedom, dependency, limiting commitment" },
+    ],
+    benefits_title: "How Will the P.D.N Method Help You?",
+    benefits_subtitle: "The P.D.N method is a breakthrough tool for personal development. Here's how it works:",
+    benefits: [
+      { step: "1", title: "Discover Your \"Source Code\"", description: "Know yourself in a new way, assess the inner engine that drives you - like a GPS showing you the safest and fastest route to your destination." },
+      { step: "2", title: "From Fear to Power", description: "Release fears. Unique techniques that allow you to release blocks and fears that hinder your personal development." },
+      { step: "3", title: "From Survival to Abundance Consciousness", description: "Reprogram the subconscious to connect to inner strengths for navigating to success." },
+      { step: "4", title: "Improve Relationships", description: "Learn a new language, how to create good communication with everyone." },
+      { step: "5", title: "Live from Power and Freedom of Choice", description: "Learn how to make beneficial decisions for creating a new reality." },
+      { step: "6", title: "Improve Self-Confidence", description: "Discover your strengths and gifts, and learn how to leverage them to face challenges and succeed." },
+      { step: "7", title: "Navigate to Success", description: "A map for navigating your life, learn how to bypass obstacles and move forward with self-confidence and inner power to achieve your goals and fulfill your purpose." },
+    ],
     cta: "Find Your Path",
   },
 };
@@ -110,6 +148,51 @@ export default async function MethodPage({
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Root Fears */}
+      <section className="py-16 sm:py-20 bg-paper">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-center mb-3">
+            {content.root_fears_title}
+          </h2>
+          <p className="text-text-secondary text-center mb-8">
+            {content.root_fears_subtitle}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {content.root_fears.map((fear, i) => (
+              <div key={i} className="bg-white border border-border rounded-xl p-5 hover:border-error/30 transition-colors">
+                <h3 className="font-bold text-navy mb-1">{fear.name}</h3>
+                <p className="text-sm text-text-secondary">{fear.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7-Step Benefits */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-center mb-3">
+            {content.benefits_title}
+          </h2>
+          <p className="text-text-secondary text-center mb-10">
+            {content.benefits_subtitle}
+          </p>
+          <div className="space-y-5">
+            {content.benefits.map((benefit, i) => (
+              <div key={i} className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-gold text-navy font-bold flex items-center justify-center shrink-0 text-sm shadow">
+                  {benefit.step}
+                </div>
+                <div>
+                  <h3 className="font-bold mb-1">{benefit.title}</h3>
+                  <p className="text-sm text-text-secondary leading-relaxed">{benefit.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
