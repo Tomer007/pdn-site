@@ -41,18 +41,19 @@ export function CodesTeaser({ dict, locale }: Props) {
             return (
               <FadeInView key={key} delay={index * 0.1}>
                 <motion.div
-                  whileHover={{ scale: 1.03, y: -4 }}
+                  whileHover={{ scale: 1.05, y: -6 }}
+                  whileTap={{ scale: 0.98 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className={`rounded-xl border p-6 text-center bg-gradient-to-br ${gradient} ${border} backdrop-blur-sm hover:shadow-xl ${glow} transition-shadow duration-300`}
+                  className={`rounded-xl border p-6 text-center bg-gradient-to-br ${gradient} ${border} backdrop-blur-sm hover:shadow-xl ${glow} transition-shadow duration-300 cursor-pointer group`}
                 >
-                  <div className="text-4xl font-display font-bold text-gold mb-1">
+                  <div className="text-4xl font-display font-bold text-gold mb-1 group-hover:scale-110 transition-transform">
                     {code.letter}
                   </div>
                   <div className="text-[10px] text-white/50 uppercase tracking-widest mb-3">
                     {code.english}
                   </div>
                   <h3 className="font-bold text-sm mb-2 text-white">{code.name}</h3>
-                  <p className="text-xs text-white/60 leading-relaxed">{code.meaning}</p>
+                  <p className="text-xs text-white/60 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">{code.meaning}</p>
                 </motion.div>
               </FadeInView>
             );

@@ -119,7 +119,7 @@ export default async function SuccessPage({
       <section className="py-12 bg-paper">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="aspect-video bg-navy/10 rounded-xl flex items-center justify-center">
-            <span className="text-4xl">▶️</span>
+            <span className="text-4xl text-gold">&#9654;</span>
           </div>
           <p className="text-sm text-text-secondary mt-3">
             {locale === "he" ? "בוגרי השיטה מספרים" : "Method graduates share their stories"}

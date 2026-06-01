@@ -280,7 +280,7 @@ export function CheckoutClient({ dict, locale }: Props) {
           </button>
 
           <p className="text-center text-xs text-text-secondary mt-3">
-            🔒 {dict.checkout.secure_note}
+            ✦ {dict.checkout.secure_note}
           </p>
         </div>
       </form>

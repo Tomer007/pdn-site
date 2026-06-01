@@ -140,7 +140,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-text-secondary hover:text-gold transition-colors"
                   >
-                    <span>📺</span> YouTube
+                    <span className="text-gold">&#9670;</span> YouTube
                   </a>
                   <a
                     href="https://www.facebook.com/PDNCODE/"
@@ -148,7 +148,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-text-secondary hover:text-gold transition-colors"
                   >
-                    <span>📘</span> Facebook
+                    <span className="text-gold">&#9670;</span> Facebook
                   </a>
                   <a
                     href="https://katzr.net/550025"
@@ -156,7 +156,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-text-secondary hover:text-gold transition-colors"
                   >
-                    <span>💬</span> WhatsApp
+                    <span className="text-gold">&#9670;</span> WhatsApp
                   </a>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 import { getDictionary } from "@/i18n/dictionaries";
 import { type Locale } from "@/i18n/config";
 import { Hero } from "@/components/Hero";
+import { SocialProofBar } from "@/components/SocialProofBar";
 import { ProgramsPreview } from "@/components/ProgramsPreview";
 import { CodesTeaser } from "@/components/CodesTeaser";
 import { MethodSection } from "@/components/MethodSection";
@@ -20,6 +21,7 @@ export default async function HomePage({
   return (
     <>
       <Hero dict={dict} locale={locale} />
+      <SocialProofBar locale={locale} />
       <ProgramsPreview dict={dict} locale={locale} />
       <CodesTeaser dict={dict} locale={locale} />
       <MethodSection dict={dict} locale={locale} />

@@ -111,19 +111,19 @@ export function ProgramsComparison({ dict, locale }: Props) {
         {/* Reassurance */}
         <div className="flex flex-wrap justify-center gap-6 mt-12 text-sm text-text-secondary">
           <span className="flex items-center gap-2">
-            <span className="text-gold">🔒</span>
+            <span className="text-gold text-lg">✦</span>
             {locale === "he" ? "תשלום מאובטח" : "Secure Payment"}
           </span>
           <span className="flex items-center gap-2">
-            <span className="text-gold">🎁</span>
+            <span className="text-gold text-lg">✦</span>
             {locale === "he" ? "אבחון מתנה" : "Free Assessment"}
           </span>
           <span className="flex items-center gap-2">
-            <span className="text-gold">📅</span>
+            <span className="text-gold text-lg">✦</span>
             {locale === "he" ? "גישה ל-180 יום" : "180-Day Access"}
           </span>
           <span className="flex items-center gap-2">
-            <span className="text-gold">💳</span>
+            <span className="text-gold text-lg">✦</span>
             {locale === "he" ? "אפשרות לתשלומים" : "Installments Available"}
           </span>
         </div>
