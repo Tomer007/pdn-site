@@ -9,7 +9,49 @@ type Props = {
   locale: Locale;
 };
 
+const testimonials = [
+  {
+    he: "זה כאילו לפגוש מישהו יודע כל, שמראה באצבעו: הנה, זה השביל שלך, זה הנתיב שלך. פתאום פגשתי את עצמי במובן הכי פשוט. הפחדים הקטנים והגדולים. החוזקות. היכולות. זה היה מאיר עיניים, ומשנה חיים.",
+    en: "It's like meeting someone who knows everything, pointing: here, this is your path. Suddenly I met myself in the simplest sense. The small and big fears. The strengths. The abilities. It was eye-opening, and life-changing.",
+    name: { he: "שלמה פ.", en: "Shlomo P." },
+    program: { he: "אבחון + קורס", en: "Assessment + Course" },
+  },
+  {
+    he: "ברגע שהבנתי מי אני, מהן האמונות שעשויות להגביל אותי, לצד מהן המתנות שלי לעולם ומה פשוט קל לי וכיף לעשות - היום יום שלי פשוט נראה אחרת!",
+    en: "The moment I understood who I am, what beliefs might limit me, alongside my gifts to the world and what's simply easy and fun for me - today my day simply looks different!",
+    name: { he: "יוני ה.", en: "Yoni H." },
+    program: { he: "התמרה", en: "Transformation" },
+  },
+  {
+    he: "שיטת PDN, הכרת הצופן שפיתחת מאפשר לי לפעול מתוך החוזקות שלי, ולעשות התמרה כשאני פועל מתוך דפוסי עבר, ולהתקדם במטרה שהצבתי לעצמי ולממש את הייעוד שלי.",
+    en: "The PDN method allows me to act from my strengths, to transform when I'm acting from past patterns, to advance toward my goal and fulfill my purpose.",
+    name: { he: "אהרון ל.", en: "Aharon L." },
+    program: { he: "התמרה", en: "Transformation" },
+  },
+  {
+    he: "השיטה עושה מהפך בחיים של אנשים. אין ספק שלהכיר את עצמנו מזווית חדשה גורם לתחושת WOW של 'איך לא ידעתי את זה על עצמי?' עם התובנות החדשות, התחלתי להתנהל אחרת.",
+    en: "The method makes a revolution in people's lives. Knowing ourselves from a new angle creates a WOW feeling of 'how didn't I know this about myself?' With new insights, I started behaving differently.",
+    name: { he: "עופר ל.", en: "Ofer L." },
+    program: { he: "קורס מלא", en: "Full Course" },
+  },
+  {
+    he: "סדנת PDN אפשרה לי לקבל ולחבק את החוזקות שבי שקיימות בי מאז היוולדי. זאת חתיכת פזל מאוד משמעותית שגילויה מאפשר לי להרגיש שלמות, יציבות, חוסן ועשייה משמעותית.",
+    en: "The PDN workshop allowed me to receive and embrace the strengths within me since birth. This is a very significant puzzle piece whose discovery allows me to feel wholeness, stability, resilience.",
+    name: { he: "נילי ג.", en: "Nili G." },
+    program: { he: "סדנה", en: "Workshop" },
+  },
+  {
+    he: "בנס פגשתי את פנינה בצומת הכי קריטית בחיים שלי. בעזרת האבחון והקורס הבנתי מה הייעוד שלי, מה הפחדים שלי, ומה המתנות שלי. מדהים עד כמה הכלים האלה חשובים.",
+    en: "By miracle I met Pnina at the most critical junction of my life. With the assessment and course I understood my purpose, my fears, and my gifts. Amazing how important these tools are.",
+    name: { he: "שרה א.", en: "Sarah A." },
+    program: { he: "אבחון + קורס", en: "Assessment + Course" },
+  },
+];
+
 export function ProofSection({ dict, locale }: Props) {
+  // Show 3 on homepage, link to /success for all
+  const displayed = testimonials.slice(0, 3);
+
   return (
     <section className="py-20 sm:py-28 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -24,31 +66,12 @@ export function ProofSection({ dict, locale }: Props) {
 
         {/* Testimonial cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          {[
-            {
-              he: "גילוי קוד המקור שלי שינה לי את החיים. הבנתי סוף סוף למה חזרתי על אותם דפוסים ואיך לשחרר אותם. היום אני מנווטת את חיי מתוך בהירות.",
-              en: "Discovering my Source Code changed my life. I finally understood why I kept repeating the same patterns and how to release them. Today I navigate my life with clarity.",
-              name: { he: "מיכל כ.", en: "Michal K." },
-              program: { he: "מסלול התמרה", en: "Transformation" },
-            },
-            {
-              he: "האתגר נתן לי כלים מעשיים שאני משתמש בהם כל יום. המאמן היומי עזר לי להישאר ממוקד ולהגשים מטרה שדחיתי שנים.",
-              en: "The challenge gave me practical tools I use every day. The daily coach helped me stay focused and achieve a goal I'd been postponing for years.",
-              name: { he: "דוד ר.", en: "David R." },
-              program: { he: "אתגר 21 יום", en: "21-Day Challenge" },
-            },
-            {
-              he: "כבר מהאבחון הראשון הרגשתי שמישהו רואה אותי באמת. המפה האישית נתנה לי שפה חדשה להבין את עצמי ואת הסביבה.",
-              en: "From the very first assessment I felt truly seen. The personal map gave me a new language to understand myself and my environment.",
-              name: { he: "שרה ל.", en: "Sarah L." },
-              program: { he: "מסלול לגלות", en: "Discover" },
-            },
-          ].map((testimonial, i) => (
+          {displayed.map((testimonial, i) => (
             <FadeInView key={i} delay={i * 0.15}>
               <div className="border border-border rounded-2xl p-6 bg-paper card-hover text-start h-full flex flex-col">
                 <div className="flex items-center gap-0.5 mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <span key={star} className="text-gold text-lg">★</span>
+                    <span key={star} className="text-gold text-lg">&#9733;</span>
                   ))}
                 </div>
                 <p className="text-sm text-text-secondary italic mb-5 leading-relaxed flex-1">
@@ -76,7 +99,7 @@ export function ProofSection({ dict, locale }: Props) {
             className="inline-flex text-gold hover:underline font-bold text-lg group"
           >
             {dict.proof.cta}{" "}
-            <span className="inline-block transition-transform group-hover:-translate-x-1 ms-1">←</span>
+            <span className="inline-block transition-transform group-hover:-translate-x-1 ms-1">&larr;</span>
           </Link>
         </FadeInView>
       </div>

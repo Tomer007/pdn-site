@@ -16,6 +16,7 @@ import { FounderSection } from "@/components/FounderSection";
 import { ConsciousnessStar } from "@/components/ConsciousnessStar";
 import { ProofSection } from "@/components/ProofSection";
 import { EmotionalClosing } from "@/components/EmotionalClosing";
+import { WebinarCTA } from "@/components/WebinarCTA";
 import { EmailCapture } from "@/components/EmailCapture";
 
 export default async function HomePage({
@@ -44,6 +45,7 @@ export default async function HomePage({
       <FounderSection dict={dict} locale={locale} />
       <ConsciousnessStar dict={dict} locale={locale} />
       <ProofSection dict={dict} locale={locale} />
+      <WebinarCTA locale={locale} />
       <EmotionalClosing locale={locale} />
       <EmailCapture dict={dict} />
     </>
