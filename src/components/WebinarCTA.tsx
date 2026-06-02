@@ -45,7 +45,7 @@ export function WebinarCTA({ locale }: Props) {
 
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FadeInView>
-          <span className="inline-block bg-gold/20 text-gold text-xs font-bold px-3 py-1 rounded-full mb-4">
+          <span className="inline-block bg-gold/20 text-gold text-[11px] font-bold px-3 py-1 rounded-full mb-4 leading-none whitespace-nowrap">
             {content.badge}
           </span>
 

@@ -29,7 +29,7 @@ export function EmailCapture({ dict }: Props) {
         <FadeInView>
           {/* Book offer */}
           <div className="mb-6">
-            <span className="inline-block bg-gold/20 text-gold text-xs font-bold px-3 py-1 rounded-full mb-3">
+            <span className="inline-block bg-gold/20 text-gold text-[11px] font-bold px-3 py-1 rounded-full mb-3 leading-none whitespace-nowrap">
               {dict.email_capture.title === "הישאר מעודכן" ? "מתנה חינמית" : "Free Gift"}
             </span>
             <h2 className="text-xl sm:text-2xl font-display font-bold mb-2">

@@ -45,11 +45,11 @@ export function Footer({ locale, dict }: FooterProps) {
           {/* Brand */}
           <div>
             <Image
-              src="/images/logo-nav.png"
-              alt="PDN"
-              width={120}
-              height={27}
-              className="h-7 w-auto mb-2"
+              src="/images/pdn-logo-full.png"
+              alt="P.D.N"
+              width={150}
+              height={34}
+              className="h-8 w-auto mb-2"
             />
             <p className="mt-2 text-sm text-white/70">
               Personal Development Navigator
