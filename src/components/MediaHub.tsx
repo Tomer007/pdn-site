@@ -77,6 +77,14 @@ export function MediaHub({ locale }: Props) {
                 <div>
                   <p className="font-bold text-sm group-hover:text-blue-600 transition-colors">Facebook</p>
                   <p className="text-xs text-text-secondary">{locale === "he" ? "פוסטים, רילס ותמונות" : "Posts, Reels & Photos"}</p>
+                  <div className="flex gap-2 mt-1">
+                    <span className="text-[10px] text-blue-500 hover:underline" onClick={(e) => { e.preventDefault(); window.open("https://www.facebook.com/PDNCODE/photos", "_blank"); }}>
+                      {locale === "he" ? "תמונות" : "Photos"}
+                    </span>
+                    <span className="text-[10px] text-blue-500 hover:underline" onClick={(e) => { e.preventDefault(); window.open("https://www.facebook.com/PDNCODE/reels/", "_blank"); }}>
+                      {locale === "he" ? "רילס" : "Reels"}
+                    </span>
+                  </div>
                 </div>
               </a>
 
