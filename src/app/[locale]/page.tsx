@@ -15,6 +15,8 @@ import { MethodSection } from "@/components/MethodSection";
 import { FounderSection } from "@/components/FounderSection";
 import { ConsciousnessStar } from "@/components/ConsciousnessStar";
 import { ProofSection } from "@/components/ProofSection";
+import { EmotionalHook } from "@/components/EmotionalHook";
+import { PackageCarousel } from "@/components/PackageCarousel";
 import { MediaHub } from "@/components/MediaHub";
 import { EmotionalClosing } from "@/components/EmotionalClosing";
 import { WebinarCTA } from "@/components/WebinarCTA";
@@ -45,8 +47,10 @@ export default async function HomePage({
       <MediaHub locale={locale} />
       <MethodSection dict={dict} locale={locale} />
       <FounderSection dict={dict} locale={locale} />
+      <EmotionalHook locale={locale} />
       <ConsciousnessStar dict={dict} locale={locale} />
       <ProofSection dict={dict} locale={locale} />
+      <PackageCarousel locale={locale} />
       <WebinarCTA locale={locale} />
       <EmotionalClosing locale={locale} />
       <EmailCapture dict={dict} />

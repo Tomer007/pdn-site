@@ -74,8 +74,10 @@ export function ProofSection({ dict, locale }: Props) {
                     <span key={star} className="text-gold text-lg">&#9733;</span>
                   ))}
                 </div>
+                {/* Decorative quote mark */}
+                <span className="text-4xl text-gold/30 font-display leading-none -mb-2">&ldquo;</span>
                 <p className="text-sm text-text-secondary italic mb-5 leading-relaxed flex-1">
-                  &ldquo;{locale === "he" ? testimonial.he : testimonial.en}&rdquo;
+                  {locale === "he" ? testimonial.he : testimonial.en}
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">

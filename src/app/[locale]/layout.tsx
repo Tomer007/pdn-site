@@ -7,6 +7,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 import { CookieConsent } from "@/components/CookieConsent";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { GlobalStickyCTA } from "@/components/GlobalStickyCTA";
 import { locales, localeConfig, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 
@@ -83,6 +84,7 @@ export default async function LocaleLayout({
         <main id="main-content" className="flex-1">{children}</main>
         <Footer locale={locale} dict={dict} />
         <ScrollProgress />
+        <GlobalStickyCTA locale={locale} label={dict.nav.cta} />
         <WhatsAppButton />
         <BackToTop />
         <CookieConsent dict={dict} locale={locale} />

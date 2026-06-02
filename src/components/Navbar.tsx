@@ -68,7 +68,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
             </Link>
             <Link
               href={`/${locale}/programs`}
-              className="hidden sm:inline-flex bg-gold hover:bg-gold-hover text-navy font-bold text-sm px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(200,160,78,0.3)]"
+              className="hidden sm:inline-flex bg-gold hover:bg-gold-hover text-navy font-bold text-sm px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(200,160,78,0.3)] animate-pulse"
             >
               {dict.nav.cta}
             </Link>

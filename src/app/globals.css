@@ -36,6 +36,11 @@ h1, h2, h3 {
   font-family: var(--font-display);
 }
 
+/* Inner page hero headlines - larger and bolder */
+section h1 {
+  letter-spacing: -0.02em;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
