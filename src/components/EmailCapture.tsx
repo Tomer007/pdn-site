@@ -60,22 +60,33 @@ export function EmailCapture({ dict }: Props) {
               </p>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex gap-2 max-w-md mx-auto">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder={dict.email_capture.placeholder}
-                className="flex-1 px-4 py-3.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold/50 backdrop-blur-sm transition-all"
-                required
-                dir="ltr"
-              />
-              <button
-                type="submit"
-                className="bg-gold hover:bg-gold-hover text-navy font-bold px-6 py-3.5 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(200,160,78,0.4)] shrink-0"
-              >
-                {dict.email_capture.button}
-              </button>
+            <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+              <div className="flex gap-2 mb-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder={dict.email_capture.placeholder}
+                  className="flex-1 px-4 py-3.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold/50 backdrop-blur-sm transition-all"
+                  required
+                  dir="ltr"
+                />
+                <button
+                  type="submit"
+                  className="bg-gold hover:bg-gold-hover text-navy font-bold px-6 py-3.5 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(200,160,78,0.4)] shrink-0"
+                >
+                  {dict.email_capture.button}
+                </button>
+              </div>
+              {/* Consent checkbox */}
+              <label className="flex items-start gap-2 text-xs text-white/50 cursor-pointer">
+                <input type="checkbox" required className="mt-0.5 accent-gold" />
+                <span>
+                  {dict.email_capture.title === "הישאר מעודכן"
+                    ? "אני מאשר/ת קבלת תכנים ועדכונים מ-PDN. ניתן לבטל בכל עת."
+                    : "I agree to receive content and updates from PDN. Unsubscribe anytime."}
+                </span>
+              </label>
             </form>
           )}
         </FadeInView>

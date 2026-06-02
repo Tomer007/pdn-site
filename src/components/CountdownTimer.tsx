@@ -14,7 +14,7 @@ export function CountdownTimer({ locale }: Props) {
     return d.getTime();
   });
 
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [timeLeft, setTimeLeft] = useState({ days: 12, hours: 8, minutes: 30, seconds: 0 });
 
   useEffect(() => {
     const timer = setInterval(() => {

@@ -80,6 +80,7 @@ export function Footer({ locale, dict }: FooterProps) {
             <div className="flex gap-4 text-xs text-white/50">
               <Link href={`/${locale}/privacy`}>{dict.footer.privacy}</Link>
               <Link href={`/${locale}/terms`}>{dict.footer.terms}</Link>
+              <Link href={`/${locale}/accessibility`}>{locale === "he" ? "נגישות" : "Accessibility"}</Link>
             </div>
           </div>
         </div>
