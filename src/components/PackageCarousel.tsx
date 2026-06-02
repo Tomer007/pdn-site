@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { type Locale } from "@/i18n/config";
 import { FadeInView } from "@/components/animations/FadeInView";
 
@@ -15,7 +15,7 @@ const packages = [
     tag: { he: "התחלה", en: "Starter" },
     features: { he: ["אבחון אישי", "מפת קוד המקור"], en: ["Personal assessment", "Source Code map"] },
     href: "discover",
-    color: "border-blue-300 bg-blue-50/50",
+    popular: false,
   },
   {
     name: { he: "התמרה עם קוד המקור", en: "Transformation" },
@@ -23,7 +23,6 @@ const packages = [
     tag: { he: "הכי פופולרי", en: "Most Popular" },
     features: { he: ["אבחון + מפה", "2 קורסים דיגיטליים", "59 שיעורים"], en: ["Assessment + map", "2 digital courses", "59 lessons"] },
     href: "transformation",
-    color: "border-gold bg-gold/5 ring-2 ring-gold/20",
     popular: true,
   },
   {
@@ -32,89 +31,98 @@ const packages = [
     tag: { he: "אינטנסיבי", en: "Intensive" },
     features: { he: ["הכל בהתמרה", "מאמן AI ל-21 יום", "4 מפגשי זום"], en: ["Everything in Transform", "AI coach for 21 days", "4 Zoom sessions"] },
     href: "challenge",
-    color: "border-purple-300 bg-purple-50/50",
+    popular: false,
   },
 ];
 
 export function PackageCarousel({ locale }: Props) {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(1); // Start on popular
 
-  function scrollLeft() {
-    scrollRef.current?.scrollBy({ left: -300, behavior: "smooth" });
-  }
-  function scrollRight() {
-    scrollRef.current?.scrollBy({ left: 300, behavior: "smooth" });
-  }
+  const pkg = packages[active];
 
   return (
     <section className="py-16 sm:py-20 bg-paper">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInView>
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-display font-bold mb-2">
               {locale === "he" ? "בחר את המסלול שלך" : "Choose Your Path"}
             </h2>
-            <p className="text-text-secondary text-sm">
-              {locale === "he" ? "גלול לצדדים לראות את כל המסלולים" : "Scroll to see all programs"}
-            </p>
           </div>
         </FadeInView>
 
-        {/* Scroll buttons */}
-        <div className="relative">
-          <button onClick={scrollLeft} className="absolute start-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white shadow-lg rounded-full flex items-center justify-center text-navy hover:bg-gold hover:text-white transition-colors hidden sm:flex" aria-label="Scroll left">
-            &lsaquo;
-          </button>
-          <button onClick={scrollRight} className="absolute end-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white shadow-lg rounded-full flex items-center justify-center text-navy hover:bg-gold hover:text-white transition-colors hidden sm:flex" aria-label="Scroll right">
-            &rsaquo;
-          </button>
+        {/* Tab buttons */}
+        <div className="flex justify-center gap-2 mb-6">
+          {packages.map((p, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              className={`px-4 sm:px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 ${
+                i === active
+                  ? "bg-gold text-navy shadow-md"
+                  : "bg-white text-text-secondary border border-border hover:border-gold/50"
+              }`}
+            >
+              {p.name[locale].split(" ")[0]}
+            </button>
+          ))}
+        </div>
 
-          {/* Carousel */}
-          <div ref={scrollRef} className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide">
-            {packages.map((pkg, i) => (
-              <motion.div
-                key={i}
-                className={`min-w-[85vw] sm:min-w-[400px] md:min-w-[450px] flex-shrink-0 snap-center rounded-2xl border-2 p-8 sm:p-10 ${pkg.color} relative`}
-                whileHover={{ y: -4 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                {pkg.popular && (
-                  <span className="absolute -top-3 start-4 bg-gold text-navy text-xs font-bold px-4 py-1.5 rounded-full shadow">
-                    {pkg.tag[locale]}
-                  </span>
-                )}
-                {!pkg.popular && (
-                  <span className="text-[11px] text-text-secondary uppercase tracking-wider font-bold">
-                    {pkg.tag[locale]}
-                  </span>
-                )}
+        {/* Single card */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className={`rounded-2xl border-2 p-8 sm:p-10 bg-white text-center ${
+              pkg.popular ? "border-gold shadow-xl" : "border-border shadow-md"
+            }`}
+          >
+            {pkg.popular && (
+              <span className="inline-block bg-gold text-navy text-xs font-bold px-4 py-1 rounded-full mb-4">
+                {pkg.tag[locale]}
+              </span>
+            )}
+            {!pkg.popular && (
+              <span className="inline-block text-xs text-text-secondary uppercase tracking-wider font-bold mb-4">
+                {pkg.tag[locale]}
+              </span>
+            )}
 
-                <h3 className="text-xl sm:text-2xl font-display font-bold mt-3 mb-2">{pkg.name[locale]}</h3>
-                <div className="text-4xl sm:text-5xl font-bold text-navy mb-6">
-                  ₪{pkg.price.toLocaleString()}
-                </div>
+            <h3 className="text-2xl font-display font-bold mb-2">{pkg.name[locale]}</h3>
+            <div className="text-5xl font-bold text-navy mb-6">
+              ₪{pkg.price.toLocaleString()}
+            </div>
 
-                <ul className="space-y-3 mb-8">
-                  {pkg.features[locale].map((f, j) => (
-                    <li key={j} className="flex items-center gap-2.5 text-base text-text-secondary">
-                      <span className="text-gold text-lg">✦</span> {f}
-                    </li>
-                  ))}
-                </ul>
+            <ul className="space-y-3 mb-8 text-start max-w-sm mx-auto">
+              {pkg.features[locale].map((f, j) => (
+                <li key={j} className="flex items-center gap-3 text-base">
+                  <span className="text-gold text-lg">✦</span> {f}
+                </li>
+              ))}
+            </ul>
 
-                <Link
-                  href={`/${locale}/programs/${pkg.href}`}
-                  className={`block text-center font-bold py-4 rounded-lg text-lg transition-all ${
-                    pkg.popular
-                      ? "bg-gold hover:bg-gold-hover text-navy shadow-md"
-                      : "border-2 border-navy text-navy hover:bg-navy hover:text-white"
-                  }`}
-                >
-                  {locale === "he" ? "לפרטים ורכישה" : "Details & Purchase"}
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+            <Link
+              href={`/${locale}/programs/${pkg.href}`}
+              className="inline-block w-full sm:w-auto bg-gold hover:bg-gold-hover text-navy font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(200,160,78,0.4)]"
+            >
+              {locale === "he" ? "לפרטים ורכישה" : "Details & Purchase"}
+            </Link>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Dots */}
+        <div className="flex justify-center gap-2 mt-5">
+          {packages.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              className={`w-2.5 h-2.5 rounded-full transition-all ${i === active ? "bg-gold scale-125" : "bg-border"}`}
+              aria-label={`Package ${i + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>
