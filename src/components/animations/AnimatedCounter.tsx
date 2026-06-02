@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 
 type Props = {
   value: number;
@@ -14,16 +14,23 @@ type Props = {
 export function AnimatedCounter({ value, suffix = "", prefix = "", duration = 2, className = "" }: Props) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(value); // Start at REAL value (SSR-safe)
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView || hasAnimated) return;
+    setHasAnimated(true);
 
+    // Reset to 0 and animate up (only on client after view)
+    setCount(0);
     let start = 0;
     const end = value;
-    const stepTime = (duration * 1000) / end;
+    const steps = 40;
+    const stepTime = (duration * 1000) / steps;
+    const increment = Math.ceil(end / steps);
+
     const timer = setInterval(() => {
-      start += Math.ceil(end / 50);
+      start += increment;
       if (start >= end) {
         setCount(end);
         clearInterval(timer);
@@ -33,17 +40,11 @@ export function AnimatedCounter({ value, suffix = "", prefix = "", duration = 2,
     }, stepTime);
 
     return () => clearInterval(timer);
-  }, [isInView, value, duration]);
+  }, [isInView, value, duration, hasAnimated]);
 
   return (
-    <motion.span
-      ref={ref}
-      className={className}
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={isInView ? { opacity: 1, scale: 1 } : {}}
-      transition={{ duration: 0.5 }}
-    >
+    <span ref={ref} className={className}>
       {prefix}{count.toLocaleString()}{suffix}
-    </motion.span>
+    </span>
   );
 }

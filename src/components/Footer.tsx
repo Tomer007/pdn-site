@@ -77,6 +77,9 @@ export function Footer({ locale, dict }: FooterProps) {
               <a href="https://www.facebook.com/PDNCODE/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-gold">Facebook</a>
               <a href="https://katzr.net/550025" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-gold">WhatsApp</a>
             </div>
+            <p className="text-xs text-white/50 mb-2">
+              {locale === "he" ? "טלפון:" : "Phone:"} <a href="tel:+972-50-000-0000" className="hover:text-gold">050-000-0000</a>
+            </p>
             <div className="flex gap-4 text-xs text-white/50">
               <Link href={`/${locale}/privacy`}>{dict.footer.privacy}</Link>
               <Link href={`/${locale}/terms`}>{dict.footer.terms}</Link>

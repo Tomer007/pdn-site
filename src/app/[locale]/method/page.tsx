@@ -1,6 +1,17 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getDictionary } from "@/i18n/dictionaries";
 import { type Locale } from "@/i18n/config";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://pdn-site.onrender.com";
+  const title = locale === "he" ? "אודות השיטה - PDN | Personal Development Navigator" : "About the Method - PDN | Personal Development Navigator";
+  const description = locale === "he"
+    ? "שיטת P.D.N - כלי אבחון אישיותי חדשני הרשום כפטנט בישראל ובארה\"ב. 30+ שנות מחקר בחקר התודעה וקבלת החלטות."
+    : "P.D.N Method - an innovative personality assessment tool patented in Israel and the US. 30+ years of consciousness research.";
+  return { title, description, alternates: { canonical: `${baseUrl}/${locale}/method`, languages: { he: `${baseUrl}/he/method`, en: `${baseUrl}/en/method` } } };
+}
 
 const methodContent = {
   he: {
@@ -20,9 +31,9 @@ const methodContent = {
         content: "כלי שברגע שמגלים אותו מבינים שמקבלים מתנה ענקית לחיים מעין \"GPS לחיים\" המאפשר לאדם להגיע ליעד שבחר בהצלחה.",
       },
       {
-        title: "הבסיס המדעי",
+        title: "הבסיס",
         icon: "◉",
-        content: "שיטת P.D.N היא כלי הערכה אישיותי-התנהגותי חדשני, המבוסס על מחקר תאורטי ומעשי רב שנים של מפתחת השיטה בשדה חקר תודעה וקבלת החלטות. השיטה מסייעת לאנשים להבין את מנעי ההתנהגות, נקודת המבט שלהם על העולם, סגנונות התקשורת שלהם, ומהן חוזקותיהם ומה מתנתם לעולם.",
+        content: "שיטת P.D.N היא כלי הערכה אישיותי-התנהגותי חדשני, שפותח לאורך שלושה עשורים של מחקר יישומי בשדה חקר תודעה וקבלת החלטות. השיטה מסייעת לאנשים להבין את מנעי ההתנהגות, נקודת המבט שלהם על העולם, סגנונות התקשורת שלהם, ומהן חוזקותיהם ומה מתנתם לעולם.",
       },
       {
         title: "המטרה",
@@ -73,8 +84,8 @@ const methodContent = {
         content: "A tool that once discovered, you realize you've received an enormous gift for life - like a \"GPS for Life\" that enables a person to reach their chosen destination successfully.",
       },
       {
-        title: "Scientific Foundation",
-        content: "The P.D.N method is an innovative personality-behavioral assessment tool, based on years of theoretical and practical research by the method's developer in the field of consciousness research and decision-making. The method helps people understand their behavioral drivers, their worldview, communication styles, strengths, and their unique gift to the world.",
+        title: "The Foundation",
+        content: "The P.D.N method is an innovative personality-behavioral assessment tool, developed over three decades of applied research in the field of consciousness research and decision-making. The method helps people understand their behavioral drivers, their worldview, communication styles, strengths, and their unique gift to the world.",
       },
       {
         title: "The Purpose",

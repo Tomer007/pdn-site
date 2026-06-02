@@ -19,10 +19,10 @@ export function OutcomeStats({ locale }: Props) {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInView>
           <h2 className="text-2xl sm:text-3xl font-display font-bold text-center mb-3">
-            {locale === "he" ? "תוצאות מוכחות" : "Proven Results"}
+            {locale === "he" ? "מה אומרים הבוגרים" : "What Graduates Say"}
           </h2>
           <p className="text-text-secondary text-center mb-10 text-sm">
-            {locale === "he" ? "על פי משוב בוגרי השיטה" : "Based on graduate feedback"}
+            {locale === "he" ? "על פי משוב בוגרי השיטה" : "Based on graduate feedback surveys"}
           </p>
         </FadeInView>
 

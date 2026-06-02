@@ -293,6 +293,11 @@ export function CheckoutClient({ dict, locale }: Props) {
           <p className="text-center text-xs text-text-secondary mt-3">
             ✦ {dict.checkout.secure_note}
           </p>
+          <p className="text-center text-xs text-text-secondary mt-1">
+            {locale === "he"
+              ? "✦ ביטול עסקה תוך 14 יום בהתאם לחוק הגנת הצרכן"
+              : "✦ 14-day cancellation policy per consumer protection law"}
+          </p>
         </div>
       </form>
     </div>

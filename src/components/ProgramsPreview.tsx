@@ -103,6 +103,9 @@ export function ProgramsPreview({ dict, locale }: Props) {
               >
                 {program.cta}
               </Link>
+              <p className="text-xs text-text-secondary mt-3">
+                {locale === "he" ? "✦ אפשרות לתשלומים נוחים" : "✦ Convenient installments available"}
+              </p>
             </div>
           </motion.div>
         </AnimatePresence>
