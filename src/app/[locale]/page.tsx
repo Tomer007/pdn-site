@@ -39,9 +39,6 @@ export default async function HomePage({
       {/* 5. Choose — programs (one at a time) */}
       <ProgramsPreview dict={dict} locale={locale} />
 
-      {/* 6. Results — proof it works */}
-      <OutcomeStats locale={locale} />
-
       {/* 7. The 4 codes — what makes it unique */}
       <CodesTeaser dict={dict} locale={locale} />
 
