@@ -70,47 +70,47 @@ export function PackageCarousel({ locale }: Props) {
           </button>
 
           {/* Carousel */}
-          <div ref={scrollRef} className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 scrollbar-hide">
+          <div ref={scrollRef} className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide">
             {packages.map((pkg, i) => (
               <motion.div
                 key={i}
-                className={`min-w-[280px] sm:min-w-[320px] flex-shrink-0 snap-center rounded-2xl border-2 p-6 ${pkg.color} relative`}
+                className={`min-w-[85vw] sm:min-w-[400px] md:min-w-[450px] flex-shrink-0 snap-center rounded-2xl border-2 p-8 sm:p-10 ${pkg.color} relative`}
                 whileHover={{ y: -4 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 {pkg.popular && (
-                  <span className="absolute -top-3 start-4 bg-gold text-navy text-[11px] font-bold px-3 py-1 rounded-full shadow">
+                  <span className="absolute -top-3 start-4 bg-gold text-navy text-xs font-bold px-4 py-1.5 rounded-full shadow">
                     {pkg.tag[locale]}
                   </span>
                 )}
                 {!pkg.popular && (
-                  <span className="text-[10px] text-text-secondary uppercase tracking-wider font-bold">
+                  <span className="text-[11px] text-text-secondary uppercase tracking-wider font-bold">
                     {pkg.tag[locale]}
                   </span>
                 )}
 
-                <h3 className="text-lg font-display font-bold mt-2 mb-1">{pkg.name[locale]}</h3>
-                <div className="text-3xl font-bold text-navy mb-4">
+                <h3 className="text-xl sm:text-2xl font-display font-bold mt-3 mb-2">{pkg.name[locale]}</h3>
+                <div className="text-4xl sm:text-5xl font-bold text-navy mb-6">
                   ₪{pkg.price.toLocaleString()}
                 </div>
 
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-3 mb-8">
                   {pkg.features[locale].map((f, j) => (
-                    <li key={j} className="flex items-center gap-2 text-sm text-text-secondary">
-                      <span className="text-gold">✦</span> {f}
+                    <li key={j} className="flex items-center gap-2.5 text-base text-text-secondary">
+                      <span className="text-gold text-lg">✦</span> {f}
                     </li>
                   ))}
                 </ul>
 
                 <Link
                   href={`/${locale}/programs/${pkg.href}`}
-                  className={`block text-center font-bold py-3 rounded-lg transition-all ${
+                  className={`block text-center font-bold py-4 rounded-lg text-lg transition-all ${
                     pkg.popular
                       ? "bg-gold hover:bg-gold-hover text-navy shadow-md"
                       : "border-2 border-navy text-navy hover:bg-navy hover:text-white"
                   }`}
                 >
-                  {locale === "he" ? "לפרטים" : "Details"}
+                  {locale === "he" ? "לפרטים ורכישה" : "Details & Purchase"}
                 </Link>
               </motion.div>
             ))}
