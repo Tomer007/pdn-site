@@ -44,11 +44,9 @@ export function Footer({ locale, dict }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <Image
+            <img
               src="/images/pdn-logo-full.png"
               alt="P.D.N"
-              width={150}
-              height={34}
               className="h-8 w-auto mb-2"
             />
             <p className="mt-2 text-sm text-white/70">

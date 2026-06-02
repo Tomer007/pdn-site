@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import { type Locale } from "@/i18n/config";
 
@@ -38,14 +37,11 @@ export function Navbar({ locale, dict }: NavbarProps) {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center gap-2">
-            <Image
+          <Link href={`/${locale}`} className="flex items-center">
+            <img
               src="/images/pdn-logo-full.png"
               alt="P.D.N - נווט חייך להצלחה"
-              width={180}
-              height={41}
               className="h-9 sm:h-10 w-auto"
-              priority
             />
           </Link>
 
