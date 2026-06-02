@@ -15,6 +15,7 @@ import { MethodSection } from "@/components/MethodSection";
 import { FounderSection } from "@/components/FounderSection";
 import { ConsciousnessStar } from "@/components/ConsciousnessStar";
 import { ProofSection } from "@/components/ProofSection";
+import { MediaHub } from "@/components/MediaHub";
 import { EmotionalClosing } from "@/components/EmotionalClosing";
 import { WebinarCTA } from "@/components/WebinarCTA";
 import { EmailCapture } from "@/components/EmailCapture";
@@ -41,6 +42,7 @@ export default async function HomePage({
       <OutcomeStats locale={locale} />
       <CodesTeaser dict={dict} locale={locale} />
       <VideoTestimonials locale={locale} />
+      <MediaHub locale={locale} />
       <MethodSection dict={dict} locale={locale} />
       <FounderSection dict={dict} locale={locale} />
       <ConsciousnessStar dict={dict} locale={locale} />
