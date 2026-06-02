@@ -95,10 +95,10 @@ export function ProgramsPreview({ dict, locale }: Props) {
             <div className="text-center">
               <Link
                 href={current.href}
-                className={`inline-block font-bold py-4 px-10 rounded-lg text-lg transition-all duration-300 ${
+                className={`inline-block w-full sm:w-auto font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 ${
                   isPopular
                     ? "bg-gold hover:bg-gold-hover text-navy shadow-lg hover:shadow-[0_0_30px_rgba(200,160,78,0.4)] hover:scale-105"
-                    : "border-2 border-navy hover:bg-navy hover:text-white text-navy"
+                    : "bg-navy hover:bg-indigo text-white shadow-md"
                 }`}
               >
                 {program.cta}
